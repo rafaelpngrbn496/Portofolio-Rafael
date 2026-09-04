@@ -1,0 +1,12 @@
+# Unused / temporary image experiments
+profile-asli.jpg
+profile-raw.jpg
+profile-studio.jpg
+profile_enhanced.jpg
+profile_half.jpg
+screenshot.png
+logo-dpr.png
+
+# System & IDE files
+.DS_Store
+Thumbs.db

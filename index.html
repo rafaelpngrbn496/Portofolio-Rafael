@@ -167,40 +167,52 @@ tailwind.config = {
   </div>
 
   <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
-    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16">
-      <!-- Profile Image -->
-      <div class="shrink-0" data-animate>
-        <div class="relative">
-          <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-secondary/25 via-primary-fixed-dim/30 to-accent-tech/20 blur-2xl scale-110"></div>
-          <div class="relative p-1.5 rounded-3xl bg-surface-container-lowest shadow-2xl ring-1 ring-outline-variant/20">
-            <div class="w-44 h-44 sm:w-52 sm:h-52 lg:w-60 lg:h-60 rounded-2xl overflow-hidden bg-surface-container">
-              <img alt="Riandika Rafael Jaya Pangaribuan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApBCj11nJ87QCno4wm79XtYGmI37EvRO0sIfPfPpkiT0R0-An0dq55oVA9517d0Y8YgmYmn-l46OrkxEiqnJX1FRZPI_7Wk4XLv1gl9R8hoiPR7XXQIsewCrw7AyUiyEwup2LTWk3RuCf41dXFSOOGtU5YpYy6ocOhRx_DkU7rsIqn8ZOK-WedEPDUTCqfwDoIbDBUB_ZAF9GZi0_MB0VkZwpKdnJlhPNzXkpzsHDnPoOvJtabIWDv">
+    <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-14 xl:gap-16">
+      <!-- Profile Image (Stretches to match biodata height) -->
+      <div class="w-full max-w-[320px] sm:max-w-[360px] lg:w-72 xl:w-80 shrink-0 self-stretch flex flex-col" data-animate>
+        <div class="relative w-full h-full flex-1">
+          <!-- Ambient lighting blur -->
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-secondary/20 via-primary-fixed-dim/25 to-accent-tech/20 blur-2xl scale-105"></div>
+          <!-- Outer photo frame card -->
+          <div class="relative w-full h-full p-2 rounded-3xl bg-surface-container-lowest shadow-2xl ring-1 ring-outline-variant/20 flex flex-col">
+            <div class="w-full h-full min-h-[380px] lg:min-h-0 rounded-2xl overflow-hidden bg-surface-container relative">
+              <img alt="Riandika Rafael Jaya Pangaribuan" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" src="profile-original.jpg">
             </div>
           </div>
         </div>
       </div>
 
       <!-- Text Content -->
-      <div class="flex-1 text-center lg:text-left max-w-3xl" data-animate>
-        <h1 class="font-display text-display text-primary mb-4">Riandika Rafael Jaya Pangaribuan</h1>
-        <p class="font-heading text-headline-md text-secondary mb-5">Data Analyst &amp; Business Intelligence</p>
-        <p class="text-body-lg text-on-surface-variant leading-relaxed mb-8 max-w-2xl lg:max-w-none">
-          Fokus pada analisis data komprehensif, pemodelan analitik, dan visualisasi insight bisnis strategis guna menginterpretasikan metrik kunci serta memandu pengambilan keputusan korporasi yang terukur dan berbasis data.
-        </p>
+      <div class="flex-1 flex flex-col justify-between text-center lg:text-left py-1" data-animate>
+        <div>
+          <h1 class="font-display text-display text-primary mb-3">Riandika Rafael Jaya Pangaribuan</h1>
+          <p class="font-heading text-headline-md text-secondary mb-4">Data Analyst &amp; Business Intelligence</p>
+          <div class="space-y-3.5 text-body-md sm:text-body-lg text-on-surface-variant leading-relaxed mb-6 max-w-2xl lg:max-w-none">
+            <p>
+              Di balik setiap deretan angka selalu ada cerita berharga, dan fokus saya adalah mengubah insight tersebut menjadi keputusan strategis yang berdampak nyata. Saat ini saya menempuh semester ke-7 di jurusan Statistika Universitas Indonesia, memadukan pemahaman teori yang kokoh dengan eksekusi praktis di bidang data analytics.
+            </p>
+            <p>
+              Pengalaman nyata dalam analisis data dan tata kelola TI di lingkungan institusi publik turut mengasah keahlian saya dalam mengolah dataset yang kompleks, merancang pemodelan prediktif, serta memahami alur logika bisnis secara tajam.
+            </p>
+            <p>
+              Berbekal rasa ingin tahu yang kuat dan antusiasme untuk terus belajar, saya selalu terpacu menghadirkan solusi inovatif di titik temu antara data dan pemecahan masalah.
+            </p>
+          </div>
+        </div>
 
         <!-- Contact Row -->
-        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
           <a href="mailto:rafaelpngrbn496@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container hover:shadow-lg transition-all text-label-lg font-body shadow-sm">
             <span class="material-symbols-outlined text-[18px]">mail</span>
             <span>rafaelpngrbn496@gmail.com</span>
           </a>
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
+          <a href="https://wa.me/6287880878450" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.67-1.18.21-.59.21-1.09.15-1.18-.06-.1-.23-.17-.48-.3z"></path></svg>
           </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
+          <a href="https://www.linkedin.com/in/riandikarafael" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
+          <a href="https://www.instagram.com/rafaelpngrbn_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
           </a>
         </div>
@@ -221,44 +233,80 @@ tailwind.config = {
       <h2 class="font-heading text-headline-lg text-primary">Pendidikan</h2>
     </div>
 
-    <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm ring-1 ring-outline-variant/15 card-hover" data-animate>
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 pb-6 border-b border-outline-variant/20">
-        <div class="flex items-center gap-5">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
-            <img src="https://lh3.googleusercontent.com/aida/AEtjO1XKdN7OZJLzvMmDH1vx6qvhzEh8IhuqmoGmp1x4LOlWZppIVY14_VjvW94eG4fOyOc943B53cvHXcryRlO5_gsgjIKm9AfM2jLt3iezUAZvGaT7PiW700lGpLIsyVkw8JcPBvbu39Rbxqq_sezKghigZhOB1_xVA0rczVvqEJOjXkLF3OYpTSgOE3ltF-tzrnkY7n4y6xZP76tUXjtVlw0sAw7ty58WECS_sSfdgPWbYCoI2axY5HwCqkU" alt="Logo Universitas Indonesia" class="w-full h-full object-contain">
-          </div>
-          <div>
-            <div class="flex flex-wrap items-center gap-3 mb-1">
-              <h3 class="font-heading text-headline-sm text-primary">Universitas Indonesia</h3>
-              <span class="px-2.5 py-0.5 rounded-full bg-accent-tech/10 text-accent-tech-dim text-label-sm font-semibold ring-1 ring-accent-tech/20">Mahasiswa Aktif</span>
+    <div class="space-y-4 sm:space-y-5">
+      <!-- Universitas Indonesia -->
+      <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-7 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover" data-animate>
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+          <div class="flex items-center gap-5">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
+              <img src="logo-ui.svg" alt="Logo Universitas Indonesia" class="w-full h-full object-contain">
             </div>
-            <p class="text-title-lg text-secondary font-medium font-heading">S1 Statistika <span class="font-normal text-on-surface-variant font-body">(Departemen Matematika / FMIPA)</span></p>
-            <p class="text-body-sm text-on-surface-variant mt-0.5">Depok, Jawa Barat, Indonesia</p>
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-1">
+                <h3 class="font-heading text-headline-sm text-primary">Universitas Indonesia</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-accent-tech/10 text-accent-tech-dim text-label-sm font-semibold ring-1 ring-accent-tech/20 font-mono">Mahasiswa Aktif</span>
+              </div>
+              <p class="text-title-lg text-secondary font-medium font-heading">S1 Statistika <span class="font-normal text-on-surface-variant font-body">(Departemen Matematika / FMIPA)</span></p>
+              <p class="text-body-sm text-on-surface-variant mt-0.5">Depok, Jawa Barat, Indonesia</p>
+            </div>
           </div>
-        </div>
-        <div class="shrink-0">
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container text-primary text-label-md ring-1 ring-outline-variant/15">
-            <span class="material-symbols-outlined text-[18px]">calendar_today</span>
-            <span>2023 – 2027</span>
-          </span>
+          <div class="shrink-0">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container text-primary text-label-md ring-1 ring-outline-variant/15 font-mono">
+              <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+              <span>2023 – 2027 (Est.)</span>
+            </span>
+          </div>
         </div>
       </div>
-      <div class="pt-6">
-        <h4 class="text-label-md text-primary uppercase tracking-wider mb-4 font-semibold">Fokus Akademik &amp; Kompetensi Inti</h4>
-        <ul class="space-y-3 text-body-md text-on-surface-variant">
-          <li class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
-            <span>Fokus pada pemodelan statistik, teori probabilitas, analisis multivariat, dan inferensi data terapan.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
-            <span>Penerapan komputasi statistika dan machine learning menggunakan bahasa pemrograman R, Python, dan SQL.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
-            <span>Aktif mengintegrasikan keahlian analisis data kuantitatif ke dalam pemecahan masalah bisnis nyata.</span>
-          </li>
-        </ul>
+
+      <!-- SMAN 68 Jakarta -->
+      <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-7 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover" data-animate>
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+          <div class="flex items-center gap-5">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-surface-container p-2 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
+              <img src="logo-sman68.png" alt="Logo SMAN 68 Jakarta" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-1">
+                <h3 class="font-heading text-headline-sm text-primary">SMAN 68 Jakarta</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary text-label-sm font-semibold ring-1 ring-secondary/20 font-mono">Alumni</span>
+              </div>
+              <p class="text-title-lg text-secondary font-medium font-heading">MIPA <span class="font-normal text-on-surface-variant font-body">(Matematika dan Ilmu Pengetahuan Alam)</span></p>
+              <p class="text-body-sm text-on-surface-variant mt-0.5">Jakarta Pusat, DKI Jakarta, Indonesia</p>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container text-primary text-label-md ring-1 ring-outline-variant/15 font-mono">
+              <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+              <span>2020 – 2023</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMPN 30 Jakarta -->
+      <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-7 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover" data-animate>
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+          <div class="flex items-center gap-5">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-surface-container p-2 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
+              <img src="logo-smpn30.png" alt="Logo SMPN 30 Jakarta" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-1">
+                <h3 class="font-heading text-headline-sm text-primary">SMPN 30 Jakarta</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary text-label-sm font-semibold ring-1 ring-secondary/20 font-mono">Alumni</span>
+              </div>
+              <p class="text-title-lg text-secondary font-medium font-heading">Sekolah Menengah Pertama</p>
+              <p class="text-body-sm text-on-surface-variant mt-0.5">Jakarta Utara, DKI Jakarta, Indonesia</p>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container text-primary text-label-md ring-1 ring-outline-variant/15 font-mono">
+              <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+              <span>2017 – 2020</span>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -268,92 +316,104 @@ tailwind.config = {
 <section class="relative w-full py-16 sm:py-20 lg:py-24 bg-surface" id="skills">
   <div class="absolute inset-0 tech-grid"></div>
   <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
-    <div class="mb-10 lg:mb-14" data-animate>
+    <div class="mb-10 lg:mb-12" data-animate>
       <div class="inline-flex items-center gap-2 text-secondary text-label-sm uppercase tracking-widest mb-3">
         <span class="material-symbols-outlined text-[16px]">domain_verification</span>
-        <span>Portofolio Kemampuan</span>
+        <span>Kemampuan</span>
       </div>
       <h2 class="font-heading text-headline-lg text-primary">Skills &amp; Abilities</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6" data-animate>
-      <!-- Programming & Database -->
-      <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col">
-        <div class="flex items-center gap-4 mb-5">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-            <span class="material-symbols-outlined text-[26px]">terminal</span>
+    <!-- 4 Software Utama -->
+    <div class="mb-8 lg:mb-10" data-animate>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+        <!-- Python -->
+        <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-7 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
+          <div class="w-14 h-14 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center mb-5 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
+            <img src="logo-python.svg" alt="Logo Python" class="w-full h-full object-contain">
           </div>
-          <div>
-            <h3 class="font-heading text-headline-sm text-primary">Programming &amp; Database</h3>
-            <span class="text-body-sm text-on-surface-variant">Bahasa pemrograman &amp; sistem manajemen basis data</span>
-          </div>
+          <h4 class="font-heading text-headline-sm text-primary mb-1">Python</h4>
+          <p class="text-body-sm text-secondary font-medium">Data Analytics &amp; Automation</p>
         </div>
-        <div class="flex flex-wrap gap-2.5 mt-auto">
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">data_object</span>Python</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">functions</span>R</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">database</span>SQL</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">storage</span>PostgreSQL</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">dns</span>MySQL</span>
+
+        <!-- R -->
+        <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-7 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
+          <div class="w-14 h-14 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center mb-5 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
+            <img src="logo-r.svg" alt="Logo R" class="w-full h-full object-contain">
+          </div>
+          <h4 class="font-heading text-headline-sm text-primary mb-1">R</h4>
+          <p class="text-body-sm text-secondary font-medium">Statistical Computing</p>
+        </div>
+
+        <!-- Excel -->
+        <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-7 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
+          <div class="w-14 h-14 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center mb-5 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
+            <img src="logo-excel.svg" alt="Logo Microsoft Excel" class="w-full h-full object-contain">
+          </div>
+          <h4 class="font-heading text-headline-sm text-primary mb-1">Excel</h4>
+          <p class="text-body-sm text-secondary font-medium">Spreadsheet &amp; Modeling</p>
+        </div>
+
+        <!-- SQL (MySQL) -->
+        <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-7 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
+          <div class="w-14 h-14 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center mb-5 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
+            <img src="logo-mysql.svg" alt="Logo MySQL" class="w-full h-full object-contain">
+          </div>
+          <h4 class="font-heading text-headline-sm text-primary mb-1">SQL (MySQL)</h4>
+          <p class="text-body-sm text-secondary font-medium">RDBMS &amp; Query Optimization</p>
         </div>
       </div>
+    </div>
 
-      <!-- Data Visualization & BI -->
-      <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col">
-        <div class="flex items-center gap-4 mb-5">
-          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
-            <span class="material-symbols-outlined text-[26px]">monitoring</span>
-          </div>
-          <div>
-            <h3 class="font-heading text-headline-sm text-primary">Data Visualization &amp; BI</h3>
-            <span class="text-body-sm text-on-surface-variant">Platform visualisasi insight &amp; dasbor interaktif</span>
-          </div>
+    <!-- Soft Skills Section -->
+    <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm ring-1 ring-outline-variant/15" data-animate>
+      <div class="flex items-center gap-4 mb-6 pb-6 border-b border-outline-variant/15">
+        <div class="w-12 h-12 rounded-xl bg-accent-tech/10 flex items-center justify-center text-accent-tech-dim">
+          <span class="material-symbols-outlined text-[26px]">psychology</span>
         </div>
-        <div class="flex flex-wrap gap-2.5 mt-auto">
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">bar_chart</span>Tableau</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">insights</span>Power BI</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">query_stats</span>Looker Studio</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">analytics</span>Metabase</span>
-        </div>
+        <h3 class="font-heading text-headline-sm text-primary">Soft Skills</h3>
       </div>
-
-      <!-- Data Analysis & Productivity -->
-      <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col">
-        <div class="flex items-center gap-4 mb-5">
-          <div class="w-12 h-12 rounded-xl bg-tertiary-fixed-dim/20 flex items-center justify-center text-tertiary-container">
-            <span class="material-symbols-outlined text-[26px]">table_chart</span>
-          </div>
-          <div>
-            <h3 class="font-heading text-headline-sm text-primary">Data Analysis &amp; Productivity</h3>
-            <span class="text-body-sm text-on-surface-variant">Alat eksplorasi data &amp; pemodelan statistik</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-2.5 mt-auto">
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">grid_on</span>Excel (Advanced / Pivot / VBA)</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">table_rows</span>Google Sheets</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">code_blocks</span>Jupyter Notebook</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">calculate</span>SPSS</span>
-        </div>
-      </div>
-
-      <!-- Soft Skills -->
-      <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col">
-        <div class="flex items-center gap-4 mb-5">
-          <div class="w-12 h-12 rounded-xl bg-accent-tech/10 flex items-center justify-center text-accent-tech-dim">
-            <span class="material-symbols-outlined text-[26px]">psychology</span>
-          </div>
-          <div>
-            <h3 class="font-heading text-headline-sm text-primary">Soft Skills &amp; Leadership</h3>
-            <span class="text-body-sm text-on-surface-variant">Keahlian interpersonal &amp; narasi data</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-2.5 mt-auto">
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">forum</span>Strategic Communication</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">lightbulb</span>Problem Solving</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">psychology_alt</span>Critical Thinking</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">diversity_3</span>Stakeholder Management</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">groups</span>Team Collaboration</span>
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">auto_stories</span>Data Storytelling</span>
-        </div>
+      <div class="flex flex-wrap gap-2.5 sm:gap-3">
+        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">analytics</span>
+          <span>Analytical Thinking</span>
+        </span>
+        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">psychology_alt</span>
+          <span>Critical Thinking</span>
+        </span>
+        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">lightbulb</span>
+          <span>Problem Solving</span>
+        </span>
+        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">center_focus_strong</span>
+          <span>Attention to Detail</span>
+        </span>
+        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">manage_search</span>
+          <span>Research Skills</span>
+        </span>
+        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">calculate</span>
+          <span>Quantitative Reasoning</span>
+        </span>
+        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">forum</span>
+          <span>Effective Communication</span>
+        </span>
+        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">groups</span>
+          <span>Team Collaboration</span>
+        </span>
+        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">diversity_3</span>
+          <span>Stakeholder Management</span>
+        </span>
+        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">sync_alt</span>
+          <span>Adaptability</span>
+        </span>
       </div>
     </div>
   </div>
@@ -376,72 +436,91 @@ tailwind.config = {
       <div class="absolute top-4 bottom-4 left-6 md:left-8 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent-tech opacity-30"></div>
       <div class="space-y-8 lg:space-y-10">
 
-        <!-- Entry 1 -->
+        <!-- Entry 1: Dewan Perwakilan Rakyat RI (Terbaru) -->
         <div class="relative flex items-start gap-5 md:gap-8" data-animate>
-          <div class="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-primary text-on-primary flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
-            <span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+          <div class="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-surface-container-lowest p-2 flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
+            <img src="logo-dpr.svg" alt="Logo DPR RI" class="w-full h-full object-contain">
           </div>
           <div class="w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-5">
               <div>
-                <span class="text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Jan 2024 – Jun 2024</span>
-                <h3 class="font-heading text-headline-sm text-primary mt-1">Technology Advisory Intern</h3>
-                <p class="text-title-lg text-on-surface-variant font-normal font-body">PT Telekomunikasi &amp; Inovasi Digital</p>
+                <span class="text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Juli 2026 – September 2026</span>
+                <h3 class="font-heading text-headline-sm text-primary mt-1">Statistician Intern</h3>
+                <p class="text-title-lg text-secondary font-medium font-heading">Dewan Perwakilan Rakyat RI <span class="font-normal text-on-surface-variant font-body text-body-sm block sm:inline sm:ml-1">(Pusat Teknologi Informasi)</span></p>
               </div>
-              <span class="self-start md:self-auto px-3 py-1.5 rounded-xl bg-surface-container text-primary text-label-sm ring-1 ring-outline-variant/15">Jakarta, Indonesia</span>
+              <span class="self-start md:self-auto px-3 py-1.5 rounded-xl bg-surface-container text-primary text-label-sm ring-1 ring-outline-variant/15 font-mono shrink-0">Jakarta, Indonesia</span>
             </div>
-            <p class="text-body-md text-on-surface-variant mb-5">Mengambil peran sentral dalam transformasi digital divisi infrastruktur telekomunikasi terpusat dengan fokus pada modernisasi arsitektur middleware.</p>
-            <ul class="space-y-3 text-body-sm text-on-surface-variant">
-              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Merancang blueprint migrasi layanan warisan ke containerized cloud ecosystem, mengurangi latency transmisi data sebesar 27%.</span></li>
-              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Menyusun laporan komparatif TCO (Total Cost of Ownership) komputasi awan yang diajukan secara langsung kepada Chief Technology Officer.</span></li>
-              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Memfasilitasi sesi sprint planning dan evaluasi backlog berkala untuk tim engineering lintas fungsi yang beranggotakan 14 pengembang.</span></li>
+            <ul class="space-y-3.5 text-body-sm sm:text-body-md text-on-surface-variant mb-6">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Memproses dan menganalisis 4.000+ baris data aspirasi publik terkait RUU dan undang-undang melalui <em>text cleaning</em>, visualisasi <em>word cloud</em>, dan analisis sentimen (menghasilkan proporsi 40,8% positif, 23,3% netral, dan 35,9% negatif).</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Mengembangkan model Regresi Logistik Ordinal untuk menguji pengaruh variabel makroekonomi (Inflasi, PDB, dan Tingkat Pengangguran Terbuka/TPT) terhadap sentimen publik pada tiga klaster RUU (Polhukam, Ekonomi, dan Sosial-Budaya), membuktikan bahwa substansi legislasi merupakan faktor determinan utama dibanding indikator makro.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Merancang skrip <em>automated web scraping</em> untuk memproduksi dataset publik berskala besar, mencakup 84.332 baris penyelarasan kode wilayah BPS–Kemendagri hingga tingkat desa/kelurahan, 15.035 baris data program nasional (Radar MBG), serta ekstraksi data tabular dari PDF Satu Data Indonesia.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Menstandardisasi metadata geospasial menggunakan CatMDEdit, menyusun <em>Manual Book</em> resmi, serta memfasilitasi sesi Bimbingan Teknis (Bimtek) dalam peluncuran Website SMART DPR RI dan platform partisipasi publik Simasleg.</span>
+              </li>
             </ul>
+
+            <!-- Skills Acquired -->
+            <div class="flex flex-wrap items-center gap-2 pt-4 border-t border-outline-variant/15">
+              <span class="text-label-sm font-mono text-secondary mr-1">Skills:</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Regresi Logistik Ordinal</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Analisis Sentimen &amp; NLP</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Web Scraping (Python)</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Data Wrangling</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Metadata Geospasial</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Technical Writing &amp; Bimtek</span>
+            </div>
           </div>
         </div>
 
-        <!-- Entry 2 -->
+        <!-- Entry 2: Kementerian PPN/Bappenas -->
         <div class="relative flex items-start gap-5 md:gap-8" data-animate>
-          <div class="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-secondary text-on-secondary flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
-            <span class="material-symbols-outlined text-[24px]">account_balance</span>
+          <div class="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-surface-container-lowest p-2 flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
+            <img src="logo-bappenas.png" alt="Logo Kementerian PPN/Bappenas" class="w-full h-full object-contain">
           </div>
           <div class="w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-5">
               <div>
-                <span class="text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Agu 2023 – Des 2023</span>
-                <h3 class="font-heading text-headline-sm text-primary mt-1">Associate Systems Analyst Intern</h3>
-                <p class="text-title-lg text-on-surface-variant font-normal font-body">FinTech Capital Solutions</p>
+                <span class="text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Februari 2026 – April 2026</span>
+                <h3 class="font-heading text-headline-sm text-primary mt-1">Data Analyst Intern</h3>
+                <p class="text-title-lg text-secondary font-medium font-heading">Kementerian PPN / Bappenas <span class="font-normal text-on-surface-variant font-body text-body-sm block sm:inline sm:ml-1">(Direktorat Pengembangan Data dan Pemerintah Digital)</span></p>
               </div>
-              <span class="self-start md:self-auto px-3 py-1.5 rounded-xl bg-surface-container text-primary text-label-sm ring-1 ring-outline-variant/15">Surabaya / Hybrid</span>
+              <span class="self-start md:self-auto px-3 py-1.5 rounded-xl bg-surface-container text-primary text-label-sm ring-1 ring-outline-variant/15 font-mono shrink-0">Jakarta, Indonesia</span>
             </div>
-            <p class="text-body-md text-on-surface-variant mb-5">Terlibat langsung dalam pengujian kepatuhan keamanan data pembayaran dan rekayasa ulang modul rekonsiliasi transaksi perbankan.</p>
-            <ul class="space-y-3 text-body-sm text-on-surface-variant">
-              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Menganalisis anomali sistem verifikasi payment gateway dan merumuskan automated data validation script menggunakan Python.</span></li>
-              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Mendokumentasikan lebih dari 40 skenario pengujian fungsional dan teknis untuk integrasi modul Open API perbankan nasional.</span></li>
-              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Mengurangi false-positive flag pada pipeline pemantauan transaksi berisiko tinggi melalui kalibrasi ulang algoritma audit internal.</span></li>
+            <ul class="space-y-3.5 text-body-sm sm:text-body-md text-on-surface-variant mb-6">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Mengelola pemrosesan, pembersihan data (<em>data sanitization</em>), dan validasi dataset sosial-ekonomi skala besar pada portal <strong>DTSEN (Data Terpadu Sosial Ekonomi Nasional)</strong> guna mendukung perumusan kebijakan publik berbasis bukti (<em>evidence-based policy</em>) serta inisiatif digital government.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Menerapkan teknik analisis statistika untuk memonitor alur kerja data (<em>data workflows</em>) secara sistematis dan mengidentifikasi serta menuntaskan anomali data demi menjamin presisi metrik pembangunan nasional.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Menyusun laporan teknis komprehensif berdasarkan sintesis temuan analitik dan menyelesaikan seluruh target <em>data deliverables</em> tepat waktu guna memperkuat keandalan operasional sistem perencanaan pembangunan nasional.</span>
+              </li>
             </ul>
-          </div>
-        </div>
 
-        <!-- Entry 3 -->
-        <div class="relative flex items-start gap-5 md:gap-8" data-animate>
-          <div class="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-tertiary-container text-on-tertiary flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
-            <span class="material-symbols-outlined text-[24px]">insights</span>
-          </div>
-          <div class="w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
-              <div>
-                <span class="text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Feb 2023 – Jul 2023</span>
-                <h3 class="font-heading text-headline-sm text-primary mt-1">Business Process Intern</h3>
-                <p class="text-title-lg text-on-surface-variant font-normal font-body">Global Consulting Group</p>
-              </div>
-              <span class="self-start md:self-auto px-3 py-1.5 rounded-xl bg-surface-container text-primary text-label-sm ring-1 ring-outline-variant/15">Jakarta, Indonesia</span>
+            <!-- Skills Acquired -->
+            <div class="flex flex-wrap items-center gap-2 pt-4 border-t border-outline-variant/15">
+              <span class="text-label-sm font-mono text-secondary mr-1">Skills:</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Analisis Data</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Berpikir Kritis</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Kolaborasi Tim</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Microsoft Excel</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Public Policy</span>
+              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Verifikator Dokumen</span>
             </div>
-            <p class="text-body-md text-on-surface-variant mb-5">Menyokong tim konsultan senior dalam penataan ulang proses bisnis rantai pasok manufaktur multinasional dan otomatisasi alur persetujuan.</p>
-            <ul class="space-y-3 text-body-sm text-on-surface-variant">
-              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Memetakan end-to-end proses pengadaan logistik menggunakan standar notasi BPMN 2.0 untuk 5 unit bisnis regional.</span></li>
-              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Mengidentifikasi bottleneck administratif yang menekan siklus persetujuan faktur dari 12 hari menjadi 3 hari kerja.</span></li>
-              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Menyusun materi workshop digital maturity assessment yang dihadiri oleh jajaran manajerial klien level direktur.</span></li>
-            </ul>
           </div>
         </div>
 
@@ -463,121 +542,66 @@ tailwind.config = {
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6" data-animate>
-      <!-- Project Card 1 -->
+      <!-- Project Card 1: Sistem Basis Data Perbankan -->
       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-48 sm:h-52 bg-gradient-to-br from-primary via-primary-container to-secondary p-5 flex flex-col justify-between overflow-hidden">
           <div class="absolute inset-0 tech-grid-dense opacity-20"></div>
           <div class="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-secondary-container/20 blur-xl"></div>
           <div class="flex justify-between items-center relative z-10">
-            <span class="px-3 py-1 rounded-lg bg-white/15 backdrop-blur-md text-on-primary text-label-sm font-mono">Enterprise Analytics</span>
-            <span class="material-symbols-outlined text-on-primary/70">monitoring</span>
+            <span class="px-3 py-1 rounded-lg bg-white/15 backdrop-blur-md text-on-primary text-label-sm font-mono">Database &amp; Sains Data</span>
+            <span class="material-symbols-outlined text-on-primary/70">database</span>
           </div>
-          <div class="relative z-10">
-            <svg class="w-full h-16 opacity-75" fill="none" viewBox="0 0 200 60">
-              <path d="M0 45 Q 40 10, 80 35 T 160 20 T 200 10" fill="none" stroke="#ADC8F5" stroke-width="3"></path>
-              <path d="M0 45 Q 40 10, 80 35 T 160 20 T 200 10 L 200 60 L 0 60 Z" fill="rgba(173, 200, 245, 0.15)"></path>
-              <circle cx="80" cy="35" fill="#FFFFFF" r="4"></circle>
-              <circle cx="160" cy="20" fill="#FFFFFF" r="4"></circle>
-            </svg>
+          <div class="relative z-10 flex items-center justify-center py-2">
+            <div class="flex items-center gap-2.5 bg-black/25 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10 text-on-primary text-label-sm font-mono">
+              <span class="text-accent-tech-dim font-bold">3NF</span>
+              <span class="text-white/40">•</span>
+              <span>6 Entities</span>
+              <span class="text-white/40">•</span>
+              <span class="text-white/90">Audit Trail</span>
+            </div>
           </div>
         </div>
         <div class="p-6 lg:p-7 flex-1 flex flex-col justify-between">
           <div>
-            <h3 class="font-heading text-headline-sm text-primary mb-2 group-hover:text-accent-tech-dim transition-colors">Enterprise ERP &amp; Dashboard Analytics</h3>
-            <p class="text-body-sm text-on-surface-variant mb-5 leading-relaxed">Platform konsolidasi data keuangan eksekutif dengan pipeline real-time processing untuk analisis profitabilitas antar anak perusahaan secara tersentralisasi.</p>
-            <div class="flex flex-wrap gap-2 mb-5">
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Next.js</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Tailwind</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">PostgreSQL</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Python</span>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-outline-variant/15 flex items-center justify-between">
-            <span class="text-label-sm text-outline">Klien: Korporasi Finansial</span>
-            <button class="inline-flex items-center gap-1.5 text-secondary text-label-md group-hover:text-accent-tech-dim group-hover:translate-x-1 transition-all" type="button">
-              <span>Lihat Detail</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </button>
-          </div>
-        </div>
-      </div>
+            <h3 class="font-heading text-headline-sm text-primary mb-2 group-hover:text-accent-tech-dim transition-colors">Sistem Basis Data Perbankan</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4 leading-relaxed">Perancangan arsitektur basis data relasional perbankan (skema 3NF) terintegrasi Python OOP Repository Pattern dan antarmuka Web GUI dengan tata kelola keamanan akun, kontrol transaksi, serta audit trail kepatuhan perbankan real-time.</p>
+            
+            <ul class="space-y-2 mb-5 text-body-sm text-on-surface-variant">
+              <li class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Normalisasi 3NF pada 6 entitas (Nasabah, Akun, Transaksi, Admin, AkunAdmin, LogAktivitas) dengan constraint integritas referensial dan regex NIK.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Implementasi Python OOP dengan Repository Design Pattern memisahkan layer Model, Table, dan Database guna efisiensi query dan keamanan.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Web GUI interaktif dengan proteksi brute-force (auto-lockout 3x), validasi PIN 6-digit, pelacakan mutasi, dan modul ekspor log audit admin.</span>
+              </li>
+            </ul>
 
-      <!-- Project Card 2 -->
-      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
-        <div class="relative h-48 sm:h-52 bg-gradient-to-br from-tertiary via-tertiary-container to-primary-container p-5 flex flex-col justify-between overflow-hidden">
-          <div class="absolute inset-0 tech-grid-dense opacity-20"></div>
-          <div class="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-tertiary-fixed-dim/20 blur-xl"></div>
-          <div class="flex justify-between items-center relative z-10">
-            <span class="px-3 py-1 rounded-lg bg-white/15 backdrop-blur-md text-on-primary text-label-sm font-mono">Banking Infrastructure</span>
-            <span class="material-symbols-outlined text-on-primary/70">security</span>
-          </div>
-          <div class="relative z-10">
-            <div class="flex items-center justify-center gap-3 py-2">
-              <div class="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center text-on-primary text-label-md font-mono">API</div>
-              <span class="material-symbols-outlined text-on-primary/50 text-[18px]">sync_alt</span>
-              <div class="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center text-on-primary text-label-md font-mono">MS</div>
-              <span class="material-symbols-outlined text-on-primary/50 text-[18px]">sync_alt</span>
-              <div class="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center text-on-primary text-label-md font-mono">DB</div>
-            </div>
-          </div>
-        </div>
-        <div class="p-6 lg:p-7 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="font-heading text-headline-sm text-primary mb-2 group-hover:text-accent-tech-dim transition-colors">Banking Microservices &amp; Gateway Platform</h3>
-            <p class="text-body-sm text-on-surface-variant mb-5 leading-relaxed">Modernisasi arsitektur gateway pembayaran perbankan berbasis arsitektur terdistribusi yang sanggup melayani beban puncak hingga 12.000 TPS tanpa gangguan.</p>
             <div class="flex flex-wrap gap-2 mb-5">
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Docker</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Go</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Redis</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Kafka</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">SQL / MySQL</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Python (OOP)</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Repository Pattern</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Web GUI</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">3NF Modeling</span>
             </div>
           </div>
-          <div class="pt-4 border-t border-outline-variant/15 flex items-center justify-between">
-            <span class="text-label-sm text-outline">Klien: Bank Komersial</span>
-            <button class="inline-flex items-center gap-1.5 text-secondary text-label-md group-hover:text-accent-tech-dim group-hover:translate-x-1 transition-all" type="button">
-              <span>Lihat Detail</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </button>
-          </div>
-        </div>
-      </div>
 
-      <!-- Project Card 3 -->
-      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
-        <div class="relative h-48 sm:h-52 bg-gradient-to-br from-secondary via-on-secondary-container to-primary p-5 flex flex-col justify-between overflow-hidden">
-          <div class="absolute inset-0 tech-grid-dense opacity-20"></div>
-          <div class="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-primary-fixed/20 blur-xl"></div>
-          <div class="flex justify-between items-center relative z-10">
-            <span class="px-3 py-1 rounded-lg bg-white/15 backdrop-blur-md text-on-primary text-label-sm font-mono">Logistics Engine</span>
-            <span class="material-symbols-outlined text-on-primary/70">local_shipping</span>
-          </div>
-          <div class="relative z-10">
-            <div class="grid grid-cols-4 gap-2 py-3 px-4">
-              <div class="h-2 rounded bg-white/30"></div>
-              <div class="h-2 rounded bg-white/60 col-span-2"></div>
-              <div class="h-2 rounded bg-white/30"></div>
-              <div class="h-2 rounded bg-white/70 col-span-3"></div>
-              <div class="h-2 rounded bg-white/20"></div>
-            </div>
-          </div>
-        </div>
-        <div class="p-6 lg:p-7 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="font-heading text-headline-sm text-primary mb-2 group-hover:text-accent-tech-dim transition-colors">Supply Chain Logistics Optimization Engine</h3>
-            <p class="text-body-sm text-on-surface-variant mb-5 leading-relaxed">Mesin kalkulasi rute multi-hub pintar guna merampingkan distribusi barang antarpulau dan menurunkan konsumsi bahan bakar armada operasional hingga 18%.</p>
-            <div class="flex flex-wrap gap-2 mb-5">
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">React</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Node.js</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">GraphQL</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">AWS</span>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-outline-variant/15 flex items-center justify-between">
-            <span class="text-label-sm text-outline">Klien: Rantai Pasok B2B</span>
-            <button class="inline-flex items-center gap-1.5 text-secondary text-label-md group-hover:text-accent-tech-dim group-hover:translate-x-1 transition-all" type="button">
-              <span>Lihat Detail</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </button>
+          <!-- Action Buttons (GitHub & Slides) -->
+          <div class="pt-4 border-t border-outline-variant/15 flex flex-wrap items-center gap-2.5">
+            <a href="https://github.com/rafaelpngrbn496" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-surface-container hover:border-secondary/50 text-on-surface-variant hover:text-primary text-body-sm font-medium transition-all group shadow-sm">
+              <svg class="w-4 h-4 fill-current text-secondary group-hover:text-primary transition-colors" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a href="Sistem%20Basis%20Data%20Perbankan-2.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-surface-container hover:border-secondary/50 text-on-surface-variant hover:text-primary text-body-sm font-medium transition-all group shadow-sm">
+              <span class="material-symbols-outlined text-[18px] text-secondary group-hover:text-primary transition-colors">desktop_windows</span>
+              <span>Slides</span>
+            </a>
           </div>
         </div>
       </div>
@@ -589,11 +613,16 @@ tailwind.config = {
 <section class="w-full bg-surface-container-lowest border-t border-outline-variant/20 py-12 sm:py-16">
   <div class="w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto flex flex-col items-center text-center">
     <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-on-primary mb-6 shadow-sm">
-      <span class="material-symbols-outlined text-[26px]">all_inclusive</span>
+      <span class="material-symbols-outlined text-[26px]">format_quote</span>
     </div>
-    <p class="font-heading text-headline-md text-primary max-w-2xl">
-      "Membangun solusi digital yang andal, scalable, dan berdampak nyata."
-    </p>
+    <blockquote class="max-w-3xl">
+      <p class="font-heading text-headline-sm sm:text-headline-md text-primary leading-relaxed italic">
+        "Kita tahu sekarang, bahwa Allah turut bekerja dalam segala sesuatu untuk mendatangkan kebaikan bagi mereka yang mengasihi Dia, yaitu bagi mereka yang terpanggil sesuai dengan rencana Allah."
+      </p>
+      <cite class="block text-label-md sm:text-title-sm text-secondary font-mono mt-4 font-semibold tracking-widest not-italic">
+        ROMA 8 : 28
+      </cite>
+    </blockquote>
   </div>
 </section>
 
@@ -606,9 +635,8 @@ tailwind.config = {
 
 <!-- ═══════════ FOOTER BAR ═══════════ -->
 <footer class="w-full bg-primary py-5">
-  <div class="w-full px-4 sm:px-6 lg:px-8 max-w-[90rem] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-    <span class="text-label-md text-on-primary/80">Rafael's Portofolio</span>
-    <p class="text-body-sm text-on-primary/60">Crafted with precision for Corporate &amp; Tech excellence.</p>
+  <div class="w-full px-4 sm:px-6 lg:px-8 max-w-[90rem] mx-auto flex items-center justify-center">
+    <span class="text-label-md text-on-primary/80 text-center">Rafael's Portofolio</span>
   </div>
 </footer>
 
