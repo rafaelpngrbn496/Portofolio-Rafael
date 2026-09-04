@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Rafael's Portofolio — Data Analyst & Business Intelligence</title>
+<meta name="description" content="Portofolio profesional Riandika Rafael Jaya Pangaribuan — Data Analyst & Business Intelligence, Universitas Indonesia">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#022448",
+        "primary-container": "#1e3a5f",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#8aa4cf",
+        "secondary": "#395f94",
+        "secondary-container": "#9ec2fe",
+        "on-secondary": "#ffffff",
+        "on-secondary-container": "#284f83",
+        "tertiary": "#00273f",
+        "tertiary-container": "#0a3d5d",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-container": "#7fa8cd",
+        "surface": "#f9f9ff",
+        "surface-dim": "#d0daf0",
+        "surface-bright": "#f9f9ff",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f0f3ff",
+        "surface-container": "#e7eeff",
+        "surface-container-high": "#dee8ff",
+        "surface-container-highest": "#d9e3f9",
+        "surface-variant": "#d9e3f9",
+        "on-surface": "#121c2c",
+        "on-surface-variant": "#43474e",
+        "on-background": "#121c2c",
+        "background": "#f9f9ff",
+        "outline": "#74777f",
+        "outline-variant": "#c4c6cf",
+        "primary-fixed": "#d5e3ff",
+        "primary-fixed-dim": "#adc8f5",
+        "secondary-fixed": "#d5e3ff",
+        "secondary-fixed-dim": "#a7c8ff",
+        "tertiary-fixed": "#cce5ff",
+        "tertiary-fixed-dim": "#a2cbf2",
+        "surface-tint": "#455f87",
+        "inverse-surface": "#273141",
+        "inverse-on-surface": "#ebf1ff",
+        "inverse-primary": "#adc8f5",
+        "error": "#ba1a1a",
+        "error-container": "#ffdad6",
+        "on-error": "#ffffff",
+        "on-error-container": "#93000a",
+        "on-primary-fixed": "#001c3b",
+        "on-primary-fixed-variant": "#2d486d",
+        "on-secondary-fixed": "#001c3b",
+        "on-secondary-fixed-variant": "#1e477b",
+        "on-tertiary-fixed": "#001d31",
+        "on-tertiary-fixed-variant": "#1d4a6b",
+        "accent-tech": "#0ea5e9",
+        "accent-tech-dim": "#0284c7",
+      },
+      fontFamily: {
+        "display": ["Space Grotesk", "sans-serif"],
+        "heading": ["Space Grotesk", "sans-serif"],
+        "body": ["Inter", "sans-serif"],
+        "mono": ["JetBrains Mono", "monospace"],
+      },
+      fontSize: {
+        "display": ["clamp(2.5rem, 5vw, 3.75rem)", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "700" }],
+        "display-sm": ["clamp(2rem, 4vw, 2.75rem)", { lineHeight: "1.15", letterSpacing: "-0.025em", fontWeight: "700" }],
+        "headline-lg": ["clamp(1.75rem, 3vw, 2.5rem)", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "headline-md": ["clamp(1.25rem, 2.5vw, 1.75rem)", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "headline-sm": ["clamp(1.1rem, 2vw, 1.375rem)", { lineHeight: "1.35", letterSpacing: "-0.005em", fontWeight: "600" }],
+        "title-lg": ["1.125rem", { lineHeight: "1.5", fontWeight: "600" }],
+        "body-lg": ["1.125rem", { lineHeight: "1.7", fontWeight: "400" }],
+        "body-md": ["1rem", { lineHeight: "1.6", fontWeight: "400" }],
+        "body-sm": ["0.875rem", { lineHeight: "1.5", fontWeight: "400" }],
+        "label-lg": ["0.9375rem", { lineHeight: "1.4", letterSpacing: "0.01em", fontWeight: "600" }],
+        "label-md": ["0.8125rem", { lineHeight: "1.4", letterSpacing: "0.02em", fontWeight: "600" }],
+        "label-sm": ["0.6875rem", { lineHeight: "1.3", letterSpacing: "0.04em", fontWeight: "600" }],
+      },
+      animation: {
+        "fade-up": "fadeUp 0.6s ease-out forwards",
+        "fade-in": "fadeIn 0.5s ease-out forwards",
+        "grid-pulse": "gridPulse 4s ease-in-out infinite",
+      },
+      keyframes: {
+        fadeUp: { "0%": { opacity: "0", transform: "translateY(24px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
+        fadeIn: { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
+        gridPulse: { "0%, 100%": { opacity: "0.3" }, "50%": { opacity: "0.6" } },
+      },
+    },
+  },
+}
+</script>
+<style>
+  @layer base {
+    html, body { margin: 0; padding: 0; }
+    body { overscroll-behavior: none; font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f0f3ff; }
+    ::-webkit-scrollbar-thumb { background: #adc8f5; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #8aa4cf; }
+  }
+  .tech-grid {
+    background-image:
+      linear-gradient(rgba(2,36,72,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(2,36,72,0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .tech-grid-dense {
+    background-image:
+      linear-gradient(rgba(2,36,72,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(2,36,72,0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .dot-pattern {
+    background-image: radial-gradient(circle, rgba(2,36,72,0.06) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  [data-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  [data-animate].visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(2,36,72,0.1);
+  }
+</style>
+</head>
+<body class="bg-background text-body-md text-on-surface antialiased font-body">
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="sticky top-0 z-50 w-full bg-surface-container-lowest/80 backdrop-blur-2xl border-b border-outline-variant/20 shadow-[0_1px_12px_rgba(2,36,72,0.06)]">
+  <div class="h-16 sm:h-18 w-full px-4 sm:px-6 lg:px-8 flex items-center justify-start">
+    <a class="group" href="#">
+      <span class="font-heading text-headline-sm text-primary tracking-tight">Rafael's Portofolio</span>
+    </a>
+  </div>
+</header>
+
+<!-- ═══════════ MAIN ═══════════ -->
+<main class="w-full bg-background">
+
+<!-- ═══════════ SECTION 1: HERO PROFILE ═══════════ -->
+<section class="relative w-full pt-16 sm:pt-20 lg:pt-28 pb-20 sm:pb-24 lg:pb-32 overflow-hidden" id="profile">
+  <!-- Background decorations -->
+  <div class="absolute inset-0 tech-grid"></div>
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute -top-20 -left-20 w-[30rem] h-[30rem] rounded-full bg-secondary-container/15 blur-[100px]"></div>
+    <div class="absolute top-1/3 right-0 w-[35rem] h-[35rem] rounded-full bg-primary-fixed/20 blur-[120px]"></div>
+    <div class="absolute bottom-0 left-1/3 w-[25rem] h-[25rem] rounded-full bg-tertiary-fixed-dim/15 blur-[80px]"></div>
+  </div>
+
+  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16">
+      <!-- Profile Image -->
+      <div class="shrink-0" data-animate>
+        <div class="relative">
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-secondary/25 via-primary-fixed-dim/30 to-accent-tech/20 blur-2xl scale-110"></div>
+          <div class="relative p-1.5 rounded-3xl bg-surface-container-lowest shadow-2xl ring-1 ring-outline-variant/20">
+            <div class="w-44 h-44 sm:w-52 sm:h-52 lg:w-60 lg:h-60 rounded-2xl overflow-hidden bg-surface-container">
+              <img alt="Riandika Rafael Jaya Pangaribuan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApBCj11nJ87QCno4wm79XtYGmI37EvRO0sIfPfPpkiT0R0-An0dq55oVA9517d0Y8YgmYmn-l46OrkxEiqnJX1FRZPI_7Wk4XLv1gl9R8hoiPR7XXQIsewCrw7AyUiyEwup2LTWk3RuCf41dXFSOOGtU5YpYy6ocOhRx_DkU7rsIqn8ZOK-WedEPDUTCqfwDoIbDBUB_ZAF9GZi0_MB0VkZwpKdnJlhPNzXkpzsHDnPoOvJtabIWDv">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="flex-1 text-center lg:text-left max-w-3xl" data-animate>
+        <h1 class="font-display text-display text-primary mb-4">Riandika Rafael Jaya Pangaribuan</h1>
+        <p class="font-heading text-headline-md text-secondary mb-5">Data Analyst &amp; Business Intelligence</p>
+        <p class="text-body-lg text-on-surface-variant leading-relaxed mb-8 max-w-2xl lg:max-w-none">
+          Fokus pada analisis data komprehensif, pemodelan analitik, dan visualisasi insight bisnis strategis guna menginterpretasikan metrik kunci serta memandu pengambilan keputusan korporasi yang terukur dan berbasis data.
+        </p>
+
+        <!-- Contact Row -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+          <a href="mailto:rafaelpngrbn496@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container hover:shadow-lg transition-all text-label-lg font-body shadow-sm">
+            <span class="material-symbols-outlined text-[18px]">mail</span>
+            <span>rafaelpngrbn496@gmail.com</span>
+          </a>
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.67-1.18.21-.59.21-1.09.15-1.18-.06-.1-.23-.17-.48-.3z"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 2: PENDIDIKAN ═══════════ -->
+<section class="relative w-full py-16 sm:py-20 lg:py-24 bg-surface-container-low" id="education">
+  <div class="absolute inset-0 dot-pattern opacity-50"></div>
+  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="mb-10 lg:mb-14" data-animate>
+      <div class="inline-flex items-center gap-2 text-secondary text-label-sm uppercase tracking-widest mb-3">
+        <span class="material-symbols-outlined text-[16px]">school</span>
+        <span>Riwayat Akademik</span>
+      </div>
+      <h2 class="font-heading text-headline-lg text-primary">Pendidikan</h2>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm ring-1 ring-outline-variant/15 card-hover" data-animate>
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 pb-6 border-b border-outline-variant/20">
+        <div class="flex items-center gap-5">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
+            <img src="https://lh3.googleusercontent.com/aida/AEtjO1XKdN7OZJLzvMmDH1vx6qvhzEh8IhuqmoGmp1x4LOlWZppIVY14_VjvW94eG4fOyOc943B53cvHXcryRlO5_gsgjIKm9AfM2jLt3iezUAZvGaT7PiW700lGpLIsyVkw8JcPBvbu39Rbxqq_sezKghigZhOB1_xVA0rczVvqEJOjXkLF3OYpTSgOE3ltF-tzrnkY7n4y6xZP76tUXjtVlw0sAw7ty58WECS_sSfdgPWbYCoI2axY5HwCqkU" alt="Logo Universitas Indonesia" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-3 mb-1">
+              <h3 class="font-heading text-headline-sm text-primary">Universitas Indonesia</h3>
+              <span class="px-2.5 py-0.5 rounded-full bg-accent-tech/10 text-accent-tech-dim text-label-sm font-semibold ring-1 ring-accent-tech/20">Mahasiswa Aktif</span>
+            </div>
+            <p class="text-title-lg text-secondary font-medium font-heading">S1 Statistika <span class="font-normal text-on-surface-variant font-body">(Departemen Matematika / FMIPA)</span></p>
+            <p class="text-body-sm text-on-surface-variant mt-0.5">Depok, Jawa Barat, Indonesia</p>
+          </div>
+        </div>
+        <div class="shrink-0">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container text-primary text-label-md ring-1 ring-outline-variant/15">
+            <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+            <span>2023 – 2027</span>
+          </span>
+        </div>
+      </div>
+      <div class="pt-6">
+        <h4 class="text-label-md text-primary uppercase tracking-wider mb-4 font-semibold">Fokus Akademik &amp; Kompetensi Inti</h4>
+        <ul class="space-y-3 text-body-md text-on-surface-variant">
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+            <span>Fokus pada pemodelan statistik, teori probabilitas, analisis multivariat, dan inferensi data terapan.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+            <span>Penerapan komputasi statistika dan machine learning menggunakan bahasa pemrograman R, Python, dan SQL.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+            <span>Aktif mengintegrasikan keahlian analisis data kuantitatif ke dalam pemecahan masalah bisnis nyata.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 3: SKILLS ═══════════ -->
+<section class="relative w-full py-16 sm:py-20 lg:py-24 bg-surface" id="skills">
+  <div class="absolute inset-0 tech-grid"></div>
+  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="mb-10 lg:mb-14" data-animate>
+      <div class="inline-flex items-center gap-2 text-secondary text-label-sm uppercase tracking-widest mb-3">
+        <span class="material-symbols-outlined text-[16px]">domain_verification</span>
+        <span>Portofolio Kemampuan</span>
+      </div>
+      <h2 class="font-heading text-headline-lg text-primary">Skills &amp; Abilities</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6" data-animate>
+      <!-- Programming & Database -->
+      <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[26px]">terminal</span>
+          </div>
+          <div>
+            <h3 class="font-heading text-headline-sm text-primary">Programming &amp; Database</h3>
+            <span class="text-body-sm text-on-surface-variant">Bahasa pemrograman &amp; sistem manajemen basis data</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2.5 mt-auto">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">data_object</span>Python</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">functions</span>R</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">database</span>SQL</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">storage</span>PostgreSQL</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">dns</span>MySQL</span>
+        </div>
+      </div>
+
+      <!-- Data Visualization & BI -->
+      <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+            <span class="material-symbols-outlined text-[26px]">monitoring</span>
+          </div>
+          <div>
+            <h3 class="font-heading text-headline-sm text-primary">Data Visualization &amp; BI</h3>
+            <span class="text-body-sm text-on-surface-variant">Platform visualisasi insight &amp; dasbor interaktif</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2.5 mt-auto">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">bar_chart</span>Tableau</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">insights</span>Power BI</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">query_stats</span>Looker Studio</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">analytics</span>Metabase</span>
+        </div>
+      </div>
+
+      <!-- Data Analysis & Productivity -->
+      <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-12 h-12 rounded-xl bg-tertiary-fixed-dim/20 flex items-center justify-center text-tertiary-container">
+            <span class="material-symbols-outlined text-[26px]">table_chart</span>
+          </div>
+          <div>
+            <h3 class="font-heading text-headline-sm text-primary">Data Analysis &amp; Productivity</h3>
+            <span class="text-body-sm text-on-surface-variant">Alat eksplorasi data &amp; pemodelan statistik</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2.5 mt-auto">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">grid_on</span>Excel (Advanced / Pivot / VBA)</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">table_rows</span>Google Sheets</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">code_blocks</span>Jupyter Notebook</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">calculate</span>SPSS</span>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-12 h-12 rounded-xl bg-accent-tech/10 flex items-center justify-center text-accent-tech-dim">
+            <span class="material-symbols-outlined text-[26px]">psychology</span>
+          </div>
+          <div>
+            <h3 class="font-heading text-headline-sm text-primary">Soft Skills &amp; Leadership</h3>
+            <span class="text-body-sm text-on-surface-variant">Keahlian interpersonal &amp; narasi data</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2.5 mt-auto">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">forum</span>Strategic Communication</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">lightbulb</span>Problem Solving</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">psychology_alt</span>Critical Thinking</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">diversity_3</span>Stakeholder Management</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">groups</span>Team Collaboration</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">auto_stories</span>Data Storytelling</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 4: PENGALAMAN MAGANG ═══════════ -->
+<section class="relative w-full py-16 sm:py-20 lg:py-24 bg-surface-container-low" id="magang">
+  <div class="absolute inset-0 tech-grid-dense opacity-40"></div>
+  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="mb-10 lg:mb-14" data-animate>
+      <div class="inline-flex items-center gap-2 text-secondary text-label-sm uppercase tracking-widest mb-3">
+        <span class="material-symbols-outlined text-[16px]">work_history</span>
+        <span>Jejak Profesional</span>
+      </div>
+      <h2 class="font-heading text-headline-lg text-primary">Pengalaman Magang</h2>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <div class="absolute top-4 bottom-4 left-6 md:left-8 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent-tech opacity-30"></div>
+      <div class="space-y-8 lg:space-y-10">
+
+        <!-- Entry 1 -->
+        <div class="relative flex items-start gap-5 md:gap-8" data-animate>
+          <div class="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-primary text-on-primary flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
+            <span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+          </div>
+          <div class="w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Jan 2024 – Jun 2024</span>
+                <h3 class="font-heading text-headline-sm text-primary mt-1">Technology Advisory Intern</h3>
+                <p class="text-title-lg text-on-surface-variant font-normal font-body">PT Telekomunikasi &amp; Inovasi Digital</p>
+              </div>
+              <span class="self-start md:self-auto px-3 py-1.5 rounded-xl bg-surface-container text-primary text-label-sm ring-1 ring-outline-variant/15">Jakarta, Indonesia</span>
+            </div>
+            <p class="text-body-md text-on-surface-variant mb-5">Mengambil peran sentral dalam transformasi digital divisi infrastruktur telekomunikasi terpusat dengan fokus pada modernisasi arsitektur middleware.</p>
+            <ul class="space-y-3 text-body-sm text-on-surface-variant">
+              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Merancang blueprint migrasi layanan warisan ke containerized cloud ecosystem, mengurangi latency transmisi data sebesar 27%.</span></li>
+              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Menyusun laporan komparatif TCO (Total Cost of Ownership) komputasi awan yang diajukan secara langsung kepada Chief Technology Officer.</span></li>
+              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Memfasilitasi sesi sprint planning dan evaluasi backlog berkala untuk tim engineering lintas fungsi yang beranggotakan 14 pengembang.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Entry 2 -->
+        <div class="relative flex items-start gap-5 md:gap-8" data-animate>
+          <div class="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-secondary text-on-secondary flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
+            <span class="material-symbols-outlined text-[24px]">account_balance</span>
+          </div>
+          <div class="w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Agu 2023 – Des 2023</span>
+                <h3 class="font-heading text-headline-sm text-primary mt-1">Associate Systems Analyst Intern</h3>
+                <p class="text-title-lg text-on-surface-variant font-normal font-body">FinTech Capital Solutions</p>
+              </div>
+              <span class="self-start md:self-auto px-3 py-1.5 rounded-xl bg-surface-container text-primary text-label-sm ring-1 ring-outline-variant/15">Surabaya / Hybrid</span>
+            </div>
+            <p class="text-body-md text-on-surface-variant mb-5">Terlibat langsung dalam pengujian kepatuhan keamanan data pembayaran dan rekayasa ulang modul rekonsiliasi transaksi perbankan.</p>
+            <ul class="space-y-3 text-body-sm text-on-surface-variant">
+              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Menganalisis anomali sistem verifikasi payment gateway dan merumuskan automated data validation script menggunakan Python.</span></li>
+              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Mendokumentasikan lebih dari 40 skenario pengujian fungsional dan teknis untuk integrasi modul Open API perbankan nasional.</span></li>
+              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Mengurangi false-positive flag pada pipeline pemantauan transaksi berisiko tinggi melalui kalibrasi ulang algoritma audit internal.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Entry 3 -->
+        <div class="relative flex items-start gap-5 md:gap-8" data-animate>
+          <div class="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-tertiary-container text-on-tertiary flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
+            <span class="material-symbols-outlined text-[24px]">insights</span>
+          </div>
+          <div class="w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Feb 2023 – Jul 2023</span>
+                <h3 class="font-heading text-headline-sm text-primary mt-1">Business Process Intern</h3>
+                <p class="text-title-lg text-on-surface-variant font-normal font-body">Global Consulting Group</p>
+              </div>
+              <span class="self-start md:self-auto px-3 py-1.5 rounded-xl bg-surface-container text-primary text-label-sm ring-1 ring-outline-variant/15">Jakarta, Indonesia</span>
+            </div>
+            <p class="text-body-md text-on-surface-variant mb-5">Menyokong tim konsultan senior dalam penataan ulang proses bisnis rantai pasok manufaktur multinasional dan otomatisasi alur persetujuan.</p>
+            <ul class="space-y-3 text-body-sm text-on-surface-variant">
+              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Memetakan end-to-end proses pengadaan logistik menggunakan standar notasi BPMN 2.0 untuk 5 unit bisnis regional.</span></li>
+              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Mengidentifikasi bottleneck administratif yang menekan siklus persetujuan faktur dari 12 hari menjadi 3 hari kerja.</span></li>
+              <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span><span>Menyusun materi workshop digital maturity assessment yang dihadiri oleh jajaran manajerial klien level direktur.</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 5: PROJECTS ═══════════ -->
+<section class="relative w-full py-16 sm:py-20 lg:py-24 bg-surface" id="project">
+  <div class="absolute inset-0 tech-grid"></div>
+  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="mb-10 lg:mb-14" data-animate>
+      <div class="inline-flex items-center gap-2 text-secondary text-label-sm uppercase tracking-widest mb-3">
+        <span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+        <span>Karya Terpilih</span>
+      </div>
+      <h2 class="font-heading text-headline-lg text-primary">Pengalaman Project</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6" data-animate>
+      <!-- Project Card 1 -->
+      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+        <div class="relative h-48 sm:h-52 bg-gradient-to-br from-primary via-primary-container to-secondary p-5 flex flex-col justify-between overflow-hidden">
+          <div class="absolute inset-0 tech-grid-dense opacity-20"></div>
+          <div class="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-secondary-container/20 blur-xl"></div>
+          <div class="flex justify-between items-center relative z-10">
+            <span class="px-3 py-1 rounded-lg bg-white/15 backdrop-blur-md text-on-primary text-label-sm font-mono">Enterprise Analytics</span>
+            <span class="material-symbols-outlined text-on-primary/70">monitoring</span>
+          </div>
+          <div class="relative z-10">
+            <svg class="w-full h-16 opacity-75" fill="none" viewBox="0 0 200 60">
+              <path d="M0 45 Q 40 10, 80 35 T 160 20 T 200 10" fill="none" stroke="#ADC8F5" stroke-width="3"></path>
+              <path d="M0 45 Q 40 10, 80 35 T 160 20 T 200 10 L 200 60 L 0 60 Z" fill="rgba(173, 200, 245, 0.15)"></path>
+              <circle cx="80" cy="35" fill="#FFFFFF" r="4"></circle>
+              <circle cx="160" cy="20" fill="#FFFFFF" r="4"></circle>
+            </svg>
+          </div>
+        </div>
+        <div class="p-6 lg:p-7 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-heading text-headline-sm text-primary mb-2 group-hover:text-accent-tech-dim transition-colors">Enterprise ERP &amp; Dashboard Analytics</h3>
+            <p class="text-body-sm text-on-surface-variant mb-5 leading-relaxed">Platform konsolidasi data keuangan eksekutif dengan pipeline real-time processing untuk analisis profitabilitas antar anak perusahaan secara tersentralisasi.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Next.js</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Tailwind</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">PostgreSQL</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Python</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-outline-variant/15 flex items-center justify-between">
+            <span class="text-label-sm text-outline">Klien: Korporasi Finansial</span>
+            <button class="inline-flex items-center gap-1.5 text-secondary text-label-md group-hover:text-accent-tech-dim group-hover:translate-x-1 transition-all" type="button">
+              <span>Lihat Detail</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+        <div class="relative h-48 sm:h-52 bg-gradient-to-br from-tertiary via-tertiary-container to-primary-container p-5 flex flex-col justify-between overflow-hidden">
+          <div class="absolute inset-0 tech-grid-dense opacity-20"></div>
+          <div class="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-tertiary-fixed-dim/20 blur-xl"></div>
+          <div class="flex justify-between items-center relative z-10">
+            <span class="px-3 py-1 rounded-lg bg-white/15 backdrop-blur-md text-on-primary text-label-sm font-mono">Banking Infrastructure</span>
+            <span class="material-symbols-outlined text-on-primary/70">security</span>
+          </div>
+          <div class="relative z-10">
+            <div class="flex items-center justify-center gap-3 py-2">
+              <div class="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center text-on-primary text-label-md font-mono">API</div>
+              <span class="material-symbols-outlined text-on-primary/50 text-[18px]">sync_alt</span>
+              <div class="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center text-on-primary text-label-md font-mono">MS</div>
+              <span class="material-symbols-outlined text-on-primary/50 text-[18px]">sync_alt</span>
+              <div class="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center text-on-primary text-label-md font-mono">DB</div>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 lg:p-7 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-heading text-headline-sm text-primary mb-2 group-hover:text-accent-tech-dim transition-colors">Banking Microservices &amp; Gateway Platform</h3>
+            <p class="text-body-sm text-on-surface-variant mb-5 leading-relaxed">Modernisasi arsitektur gateway pembayaran perbankan berbasis arsitektur terdistribusi yang sanggup melayani beban puncak hingga 12.000 TPS tanpa gangguan.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Docker</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Go</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Redis</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Kafka</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-outline-variant/15 flex items-center justify-between">
+            <span class="text-label-sm text-outline">Klien: Bank Komersial</span>
+            <button class="inline-flex items-center gap-1.5 text-secondary text-label-md group-hover:text-accent-tech-dim group-hover:translate-x-1 transition-all" type="button">
+              <span>Lihat Detail</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+        <div class="relative h-48 sm:h-52 bg-gradient-to-br from-secondary via-on-secondary-container to-primary p-5 flex flex-col justify-between overflow-hidden">
+          <div class="absolute inset-0 tech-grid-dense opacity-20"></div>
+          <div class="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-primary-fixed/20 blur-xl"></div>
+          <div class="flex justify-between items-center relative z-10">
+            <span class="px-3 py-1 rounded-lg bg-white/15 backdrop-blur-md text-on-primary text-label-sm font-mono">Logistics Engine</span>
+            <span class="material-symbols-outlined text-on-primary/70">local_shipping</span>
+          </div>
+          <div class="relative z-10">
+            <div class="grid grid-cols-4 gap-2 py-3 px-4">
+              <div class="h-2 rounded bg-white/30"></div>
+              <div class="h-2 rounded bg-white/60 col-span-2"></div>
+              <div class="h-2 rounded bg-white/30"></div>
+              <div class="h-2 rounded bg-white/70 col-span-3"></div>
+              <div class="h-2 rounded bg-white/20"></div>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 lg:p-7 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-heading text-headline-sm text-primary mb-2 group-hover:text-accent-tech-dim transition-colors">Supply Chain Logistics Optimization Engine</h3>
+            <p class="text-body-sm text-on-surface-variant mb-5 leading-relaxed">Mesin kalkulasi rute multi-hub pintar guna merampingkan distribusi barang antarpulau dan menurunkan konsumsi bahan bakar armada operasional hingga 18%.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">React</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Node.js</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">GraphQL</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">AWS</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-outline-variant/15 flex items-center justify-between">
+            <span class="text-label-sm text-outline">Klien: Rantai Pasok B2B</span>
+            <button class="inline-flex items-center gap-1.5 text-secondary text-label-md group-hover:text-accent-tech-dim group-hover:translate-x-1 transition-all" type="button">
+              <span>Lihat Detail</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 6: QUOTE ═══════════ -->
+<section class="w-full bg-surface-container-lowest border-t border-outline-variant/20 py-12 sm:py-16">
+  <div class="w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto flex flex-col items-center text-center">
+    <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-on-primary mb-6 shadow-sm">
+      <span class="material-symbols-outlined text-[26px]">all_inclusive</span>
+    </div>
+    <p class="font-heading text-headline-md text-primary max-w-2xl">
+      "Membangun solusi digital yang andal, scalable, dan berdampak nyata."
+    </p>
+  </div>
+</section>
+
+<!-- FLOATING BACK-TO-TOP -->
+<button aria-label="Kembali ke atas" class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-40 w-12 h-12 rounded-xl bg-primary text-on-primary shadow-xl opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4 hover:scale-110 hover:shadow-2xl flex items-center justify-center ring-1 ring-primary-fixed-dim/30" id="back-to-top">
+  <span class="material-symbols-outlined text-[24px]">keyboard_arrow_up</span>
+</button>
+
+</main>
+
+<!-- ═══════════ FOOTER BAR ═══════════ -->
+<footer class="w-full bg-primary py-5">
+  <div class="w-full px-4 sm:px-6 lg:px-8 max-w-[90rem] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+    <span class="text-label-md text-on-primary/80">Rafael's Portofolio</span>
+    <p class="text-body-sm text-on-primary/60">Crafted with precision for Corporate &amp; Tech excellence.</p>
+  </div>
+</footer>
+
+<!-- ═══════════ SCRIPTS ═══════════ -->
+<script>
+(function () {
+  // Back to top
+  const backToTopBtn = document.getElementById('back-to-top');
+  function handleScroll() {
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+    } else {
+      backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+    }
+  }
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  backToTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Scroll-reveal animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+})();
+</script>
+
+</body>
+</html>
