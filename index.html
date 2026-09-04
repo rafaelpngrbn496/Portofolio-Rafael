@@ -499,7 +499,7 @@ tailwind.config = {
             <ul class="space-y-3.5 text-body-sm sm:text-body-md text-on-surface-variant mb-6">
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
-                <span>Mengelola pemrosesan, pembersihan data (<em>data sanitization</em>), dan validasi dataset sosial-ekonomi skala besar pada portal <strong>DTSEN (Data Terpadu Sosial Ekonomi Nasional)</strong> guna mendukung perumusan kebijakan publik berbasis bukti (<em>evidence-based policy</em>) serta inisiatif digital government.</span>
+                <span>Mengelola pemrosesan, pembersihan data (<em>data sanitization</em>), dan validasi dataset sosial-ekonomi skala besar pada portal <strong>DTSEN (Data Tunggal Sosial Ekonomi Nasional)</strong> guna mendukung perumusan kebijakan publik berbasis bukti (<em>evidence-based policy</em>) serta inisiatif digital government.</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
@@ -541,54 +541,261 @@ tailwind.config = {
       <h2 class="font-heading text-headline-lg text-primary">Pengalaman Project</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6" data-animate>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" data-animate>
       <!-- Project Card 1: Sistem Basis Data Perbankan -->
       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <!-- Cover Image: Bank Dunia -->
-        <div class="relative h-48 sm:h-56 overflow-hidden">
+        <div class="relative h-44 overflow-hidden">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/World_Bank_Group_headquarters.jpg/1280px-World_Bank_Group_headquarters.jpg" alt="World Bank Building" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
-          <div class="absolute top-4 left-4 right-4 flex justify-between items-center z-10">
-            <span class="px-3 py-1 rounded-lg bg-black/40 backdrop-blur-md text-on-primary text-label-sm font-mono ring-1 ring-white/15">Database &amp; Sains Data</span>
-            <div class="w-8 h-8 rounded-lg bg-black/40 backdrop-blur-md flex items-center justify-center text-on-primary ring-1 ring-white/15">
-              <span class="material-symbols-outlined text-[18px]">account_balance</span>
+          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
+            <span class="px-2.5 py-1 rounded-lg bg-black/40 backdrop-blur-md text-on-primary text-[11px] font-mono ring-1 ring-white/15">Database untuk Sains Data</span>
+            <div class="w-7 h-7 rounded-lg bg-black/40 backdrop-blur-md flex items-center justify-center text-on-primary ring-1 ring-white/15">
+              <span class="material-symbols-outlined text-[16px]">account_balance</span>
             </div>
           </div>
         </div>
-        <div class="p-6 lg:p-7 flex-1 flex flex-col justify-between">
+        <div class="p-5 flex-1 flex flex-col justify-between">
           <div>
-            <h3 class="font-heading text-headline-sm text-primary mb-2 group-hover:text-accent-tech-dim transition-colors">Sistem Basis Data Perbankan</h3>
-            <p class="text-body-sm text-on-surface-variant mb-4 leading-relaxed">Perancangan arsitektur basis data relasional perbankan (skema 3NF) terintegrasi Python OOP Repository Pattern dan antarmuka Web GUI dengan tata kelola keamanan akun, kontrol transaksi, serta audit trail kepatuhan perbankan real-time.</p>
+            <h3 class="font-heading text-title-md text-primary mb-1.5 group-hover:text-accent-tech-dim transition-colors line-clamp-1">Sistem Basis Data Perbankan</h3>
+            <p class="text-body-xs text-on-surface-variant mb-3 leading-relaxed">Arsitektur basis data relasional perbankan (3NF) terintegrasi Python OOP Repository Pattern dan Web GUI dengan kontrol keamanan akun serta audit trail transaksi real-time.</p>
             
-            <ul class="space-y-2 mb-5 text-body-sm text-on-surface-variant">
-              <li class="flex items-start gap-2.5">
-                <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
-                <span>Normalisasi 3NF pada 6 entitas (Nasabah, Akun, Transaksi, Admin, AkunAdmin, LogAktivitas) dengan constraint integritas referensial dan regex NIK.</span>
+            <ul class="space-y-1.5 mb-3.5 text-body-xs text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Normalisasi 3NF 6 entitas dengan constraint integritas referensial dan regex NIK.</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
-                <span>Implementasi Python OOP dengan Repository Design Pattern memisahkan layer Model, Table, dan Database guna efisiensi query dan keamanan.</span>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Python OOP Repository Pattern memisahkan layer Model, Table, dan Database.</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <span class="material-symbols-outlined text-[18px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
-                <span>Web GUI interaktif dengan proteksi brute-force (auto-lockout 3x), validasi PIN 6-digit, pelacakan mutasi, dan modul ekspor log audit admin.</span>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Web GUI interaktif dengan proteksi lockout 3x, PIN 6-digit, dan modul audit log.</span>
               </li>
             </ul>
 
-            <div class="flex flex-wrap gap-2 mb-5">
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">SQL / MySQL</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Python (OOP)</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Repository Pattern</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">Web GUI</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-mono">3NF Modeling</span>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">SQL/MySQL</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">Python (OOP)</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">Repository Pattern</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">3NF Modeling</span>
             </div>
           </div>
 
           <!-- Action Buttons (Slides) -->
-          <div class="pt-4 border-t border-outline-variant/15 flex flex-wrap items-center gap-2.5">
-            <a href="Sistem%20Basis%20Data%20Perbankan-2.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-sm font-medium transition-all group/btn shadow-sm">
-              <span class="material-symbols-outlined text-[18px] text-secondary group-hover/btn:text-on-primary transition-colors">desktop_windows</span>
+          <div class="pt-3.5 border-t border-outline-variant/15 flex flex-wrap items-center gap-2">
+            <a href="Project/Sistem%20Basis%20Data%20Perbankan-2.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+              <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">desktop_windows</span>
               <span>Slides</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 2: Analisis Multivariat MANOVA -->
+      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+        <!-- Cover Image: Statistical Analysis & Charts -->
+        <div class="relative h-44 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Analisis Multivariat MANOVA" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
+            <span class="px-2.5 py-1 rounded-lg bg-black/40 backdrop-blur-md text-on-primary text-[11px] font-mono ring-1 ring-white/15">Pengantar Multivariat</span>
+            <div class="w-7 h-7 rounded-lg bg-black/40 backdrop-blur-md flex items-center justify-center text-on-primary ring-1 ring-white/15">
+              <span class="material-symbols-outlined text-[16px]">query_stats</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-heading text-title-md text-primary mb-1.5 group-hover:text-accent-tech-dim transition-colors line-clamp-1">Analisis Multivariat Kasus MANOVA</h3>
+            <p class="text-body-xs text-on-surface-variant mb-3 leading-relaxed">Inferensia statistika multivariat metode MANOVA dan ANOVA univariat berbasis R/RStudio untuk evaluasi komparatif vektor mean simultan pada dua studi kasus empiris.</p>
+            
+            <ul class="space-y-1.5 mb-3.5 text-body-xs text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Uji asumsi ketat: normalitas (Henze-Zirkler &amp; Mardia) dan homogenitas kovarians.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Analisis efektivitas media diet dan pengaruh sepak bola terhadap dimensi kranial.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Uji Wilks' Lambda, Roy, Pillai, Hotelling, serta post-hoc Univariate ANOVA.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">R / RStudio</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">MANOVA</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">Wilks' Lambda</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">ANOVA</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons (Laporan) -->
+          <div class="pt-3.5 border-t border-outline-variant/15 flex flex-wrap items-center gap-2">
+            <a href="Project/Tugas%20Project%20Pengmul%20-%20Riandika%20Rafael%20Jaya%20Pangaribuan%20-%202306242874.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+              <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">description</span>
+              <span>Laporan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 3: Analisis Multivariat (Customer Personality Analysis) -->
+      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+        <!-- Cover Image: Market Segmentation & Analytics -->
+        <div class="relative h-44 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Customer Personality Analysis" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
+            <span class="px-2.5 py-1 rounded-lg bg-black/40 backdrop-blur-md text-on-primary text-[11px] font-mono ring-1 ring-white/15">Analisis Multivariat</span>
+            <div class="w-7 h-7 rounded-lg bg-black/40 backdrop-blur-md flex items-center justify-center text-on-primary ring-1 ring-white/15">
+              <span class="material-symbols-outlined text-[16px]">hub</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-heading text-title-md text-primary mb-1.5 group-hover:text-accent-tech-dim transition-colors line-clamp-1">Customer Personality Analysis</h3>
+            <p class="text-body-xs text-on-surface-variant mb-3 leading-relaxed">Studi analitik multivariat 2.240 data pelanggan untuk segmentasi pasar, pemodelan daya beli, serta eksplorasi asosiasi perilaku konsumen via Klastering, Regresi, dan MCA.</p>
+            
+            <ul class="space-y-1.5 mb-3.5 text-body-xs text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Segmentasi 4 klaster pelanggan via Ward Linkage, Cophenetic, &amp; PCA biplot.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Pemodelan prediktif pengeluaran (Expenses, R² = 0.75) via OLS &amp; uji Mardia.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Eksplorasi MCA biplot 2D memetakan preferensi konsumsi, komplain, &amp; sosiodemografi.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">Python / R</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">Clustering</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">Regression</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">MCA &amp; PCA</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons (Laporan) -->
+          <div class="pt-3.5 border-t border-outline-variant/15 flex flex-wrap items-center gap-2">
+            <a href="Project/Laporan%20Projek%20Akhir%20Analisis%20Multivariat%20Kelompok%205%20(1).pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+              <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">description</span>
+              <span>Laporan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 4: Metode Peramalan (Peramalan Saham IBM) -->
+      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+        <!-- Cover Image: Financial & Stock Charts -->
+        <div class="relative h-44 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80" alt="Peramalan Saham IBM" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
+            <span class="px-2.5 py-1 rounded-lg bg-black/40 backdrop-blur-md text-on-primary text-[11px] font-mono ring-1 ring-white/15">Metode Peramalan</span>
+            <div class="w-7 h-7 rounded-lg bg-black/40 backdrop-blur-md flex items-center justify-center text-on-primary ring-1 ring-white/15">
+              <span class="material-symbols-outlined text-[16px]">trending_up</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-heading text-title-md text-primary mb-1.5 group-hover:text-accent-tech-dim transition-colors line-clamp-1">Peramalan Saham IBM (ARIMA &amp; GARCH)</h3>
+            <p class="text-body-xs text-on-surface-variant mb-3 leading-relaxed">Pemodelan deret waktu 1.089 data harian harga saham IBM (2020–2024) memadukan Box-Jenkins ARIMA untuk estimasi harga dan GARCH untuk estimasi volatilitas risiko pasar.</p>
+            
+            <ul class="space-y-1.5 mb-3.5 text-body-xs text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>EDA &amp; uji ADF stasioneritas, differencing d=1, serta analisis ACF/PACF/EACF.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Estimasi parsimoni AIC/BIC menentukan ARIMA(0,1,2) terbaik (white-noise).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Pemodelan volatilitas finansial GARCH(1,1) menangkap risiko varians bersyarat.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">Python / R</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">Time Series</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">ARIMA(0,1,2)</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">GARCH(1,1)</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons (Laporan) -->
+          <div class="pt-3.5 border-t border-outline-variant/15 flex flex-wrap items-center gap-2">
+            <a href="Project/Laporan%20Final%20Project%20Metode%20Peramalan%20-%20Kelompok%208.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+              <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">description</span>
+              <span>Laporan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 5: Analisis Data Tidak Terstruktur (Playing Cards Detection YOLOv8) -->
+      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+        <!-- Cover Image: Poster Proyek Andat TT -->
+        <div class="relative h-44 overflow-hidden">
+          <img src="Project/UAS%20Andat%20TT.png" alt="Playing Cards Detection YOLOv8 Poster" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
+            <span class="px-2.5 py-1 rounded-lg bg-black/40 backdrop-blur-md text-on-primary text-[11px] font-mono ring-1 ring-white/15">Data Tidak Terstruktur</span>
+            <div class="w-7 h-7 rounded-lg bg-black/40 backdrop-blur-md flex items-center justify-center text-on-primary ring-1 ring-white/15">
+              <span class="material-symbols-outlined text-[16px]">view_in_ar</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-heading text-title-md text-primary mb-1.5 group-hover:text-accent-tech-dim transition-colors line-clamp-1">Playing Cards Detection (YOLOv8)</h3>
+            <p class="text-body-xs text-on-surface-variant mb-3 leading-relaxed">Penerapan Computer Vision arsitektur YOLOv8s (Ultralytics) untuk deteksi dan klasifikasi 52 kelas kartu remi secara presisi dengan transfer learning pretrained COCO.</p>
+            
+            <ul class="space-y-1.5 mb-3.5 text-body-xs text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Dataset 52 kelas kartu (Roboflow Universe v4), augmentasi data, input 640×640 px.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Training YOLOv8s 50 epoch (early stopping) di Google Colab T4 GPU.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+                <span>Akurasi tinggi: <strong>mAP@50 99.5%</strong> (0.9950), Precision 99.8%, &amp; multi-objek real-time.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">Python</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">YOLOv8s</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">Computer Vision</span>
+              <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-mono">PyTorch</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons (Poster & Notebook) -->
+          <div class="pt-3.5 border-t border-outline-variant/15 flex flex-wrap items-center gap-2">
+            <a href="Project/UAS%20Andat%20TT.png" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+              <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">image</span>
+              <span>Poster</span>
+            </a>
+            <a href="Project/Andat_TT_UAS.ipynb" download class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+              <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">code</span>
+              <span>Notebook</span>
             </a>
           </div>
         </div>
