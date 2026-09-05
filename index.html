@@ -136,9 +136,15 @@
   }
 
   /* ── Base ── */
-  html, body { margin: 0; padding: 0; overflow-x: hidden; }
+  html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
   body {
-    overscroll-behavior: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     font-family: 'Inter', sans-serif;
     transition: background-color 0.35s ease, color 0.35s ease;
   }
@@ -152,6 +158,9 @@
   ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-hover); }
 
   /* ── Background Textures ── */
+  .tech-grid, .tech-grid-dense, .dot-pattern {
+    pointer-events: none;
+  }
   .tech-grid {
     background-image:
       linear-gradient(rgb(var(--grid-rgb) / 0.03) 1px, transparent 1px),
@@ -187,6 +196,14 @@
   .card-hover:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgb(var(--c-primary) / 0.1);
+  }
+
+  /* ── Project Pagination ── */
+  .project-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .project-card.page-hidden {
+    display: none !important;
   }
 
   /* ── Mobile Navigation ── */
@@ -272,6 +289,7 @@
         <a href="#skills" class="nav-link text-label-md text-on-surface-variant">Kemampuan</a>
         <a href="#magang" class="nav-link text-label-md text-on-surface-variant">Magang</a>
         <a href="#project" class="nav-link text-label-md text-on-surface-variant">Project</a>
+        <a href="#contact" class="nav-link text-label-md text-on-surface-variant">Kontak</a>
       </nav>
 
       <!-- Theme Toggle -->
@@ -294,11 +312,12 @@
       <a href="#skills" class="mobile-link nav-link min-h-[44px] flex items-center text-body-md text-on-surface-variant px-3 py-2 rounded-xl active:bg-surface-container">Kemampuan</a>
       <a href="#magang" class="mobile-link nav-link min-h-[44px] flex items-center text-body-md text-on-surface-variant px-3 py-2 rounded-xl active:bg-surface-container">Magang</a>
       <a href="#project" class="mobile-link nav-link min-h-[44px] flex items-center text-body-md text-on-surface-variant px-3 py-2 rounded-xl active:bg-surface-container">Project</a>
+      <a href="#contact" class="mobile-link nav-link min-h-[44px] flex items-center text-body-md text-on-surface-variant px-3 py-2 rounded-xl active:bg-surface-container">Kontak</a>
     </nav>
   </div>
 </header>
 
-<main class="w-full bg-background overflow-x-hidden">
+<main class="w-full bg-background">
 
 <!-- HERO PROFILE -->
 <section class="relative w-full pt-14 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 lg:pb-32 overflow-hidden" id="profile">
@@ -690,10 +709,10 @@
       <h2 class="font-heading text-headline-lg text-primary">Pengalaman Project</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5" data-animate>
+    <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5" data-animate>
 
       <!-- Project 1: Sistem Basis Data Perbankan -->
-      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+      <div class="project-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/World_Bank_Group_headquarters.jpg/1280px-World_Bank_Group_headquarters.jpg" alt="World Bank Building" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
@@ -739,7 +758,7 @@
       </div>
 
       <!-- Project 2: Analisis Multivariat MANOVA -->
-      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+      <div class="project-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Analisis Multivariat MANOVA" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
@@ -785,7 +804,7 @@
       </div>
 
       <!-- Project 3: Customer Personality Analysis -->
-      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+      <div class="project-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
           <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Customer Personality Analysis" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
@@ -831,7 +850,7 @@
       </div>
 
       <!-- Project 4: Peramalan Saham IBM -->
-      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+      <div class="project-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
           <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80" alt="Peramalan Saham IBM" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
@@ -877,7 +896,7 @@
       </div>
 
       <!-- Project 5: Playing Cards Detection YOLOv8 -->
-      <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
+      <div class="project-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
           <img src="Project/UAS%20Andat%20TT.png" alt="Playing Cards Detection YOLOv8 Poster" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
@@ -926,6 +945,101 @@
         </div>
       </div>
 
+    </div>
+
+    <!-- Project Pagination Controls -->
+    <div id="project-pagination" class="mt-8 sm:mt-10 pt-6 border-t border-outline-variant/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p id="project-page-info" class="text-body-xs font-mono text-on-surface-variant text-center sm:text-left">
+        Menampilkan <span id="project-range" class="font-semibold text-primary">1–4</span> dari <span id="project-total" class="font-semibold text-primary">5</span> project
+      </p>
+      <div class="flex items-center gap-2">
+        <button id="project-prev-btn" class="w-9 h-9 rounded-xl flex items-center justify-center border border-outline-variant/30 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-primary disabled:opacity-30 disabled:pointer-events-none transition-all shadow-sm" aria-label="Halaman sebelumnya">
+          <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+        </button>
+        <div id="project-page-numbers" class="flex items-center gap-1.5">
+          <!-- Dynamically populated -->
+        </div>
+        <button id="project-next-btn" class="w-9 h-9 rounded-xl flex items-center justify-center border border-outline-variant/30 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-primary disabled:opacity-30 disabled:pointer-events-none transition-all shadow-sm" aria-label="Halaman berikutnya">
+          <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK / HUBUNGI SAYA -->
+<section class="relative w-full py-14 sm:py-20 lg:py-24 bg-surface-container-lowest border-t border-outline-variant/15" id="contact">
+  <div class="absolute inset-0 tech-grid"></div>
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-1/2 -right-20 w-[28rem] h-[28rem] rounded-full bg-primary-fixed/15 blur-[120px]"></div>
+    <div class="absolute -bottom-20 left-10 w-[24rem] h-[24rem] rounded-full bg-secondary-container/15 blur-[100px]"></div>
+  </div>
+
+  <div class="relative w-full px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+    <div class="p-6 sm:p-8 lg:p-10 rounded-3xl bg-surface border border-outline-variant/25 shadow-xl relative" data-animate>
+      <div class="mb-6 sm:mb-8">
+        <div class="inline-flex items-center gap-2 text-secondary text-label-sm uppercase tracking-widest mb-2">
+          <span class="material-symbols-outlined text-[16px]">mail</span>
+          <span>Kontak Langsung</span>
+        </div>
+        <h2 class="font-heading text-headline-md sm:text-headline-lg text-primary mb-1.5">Hubungi Saya</h2>
+        <p class="text-body-xs sm:text-body-sm text-on-surface-variant">Silahkan tulisan pesan anda untuk saya</p>
+      </div>
+
+      <form id="contact-form" class="space-y-4 sm:space-y-5" novalidate>
+        <!-- Grid 2 Col for Name & Email -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="contact-name" class="block text-label-sm font-medium text-on-surface mb-1.5">Nama Anda <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline-variant text-[18px]">person</span>
+              <input type="text" id="contact-name" name="name" required placeholder="Nama Anda" class="w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-body-sm text-on-surface placeholder:text-outline-variant/70 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+            </div>
+          </div>
+
+          <div>
+            <label for="contact-email" class="block text-label-sm font-medium text-on-surface mb-1.5">Alamat Email <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline-variant text-[18px]">mail</span>
+              <input type="email" id="contact-email" name="email" required placeholder="nama@perusahaan.com" class="w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-body-sm text-on-surface placeholder:text-outline-variant/70 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+            </div>
+          </div>
+        </div>
+
+        <!-- Subject (Optional) -->
+        <div>
+          <label for="contact-subject" class="block text-label-sm font-medium text-on-surface mb-1.5">Subjek / Topik</label>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline-variant text-[18px]">subject</span>
+            <input type="text" id="contact-subject" name="subject" placeholder="Contoh: Peluang Magang Data Analyst / Kolaborasi" class="w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-body-sm text-on-surface placeholder:text-outline-variant/70 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="contact-message" class="block text-label-sm font-medium text-on-surface mb-1.5">Pesan Anda <span class="text-red-500">*</span></label>
+          <div class="relative">
+            <textarea id="contact-message" name="message" rows="4" required placeholder="Tuliskan pesan Anda di sini..." class="w-full p-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-body-sm text-on-surface placeholder:text-outline-variant/70 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-y min-h-[110px]"></textarea>
+          </div>
+        </div>
+
+        <!-- Error Alert (Only if submission fails) -->
+        <div id="contact-alert-error" class="hidden p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-800 dark:text-rose-300 text-body-xs flex items-start gap-3">
+          <span class="material-symbols-outlined text-[20px] text-rose-600 dark:text-rose-400 shrink-0">error</span>
+          <div>
+            <strong class="block font-semibold">Gagal Mengirim Pesan</strong>
+            <span id="contact-error-text">Mohon periksa kelengkapan isian atau hubungi saya langsung via WhatsApp / Email.</span>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit" id="contact-submit-btn" class="w-full sm:w-auto min-h-[46px] px-8 py-3 rounded-xl bg-primary text-on-primary font-medium text-body-sm shadow-md hover:shadow-lg hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed">
+            <span id="contact-btn-text">Kirim Pesan</span>
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" id="contact-btn-icon">send</span>
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -1121,6 +1235,204 @@
       });
     }, { threshold: 0.2 });
     metricsObserver.observe(metricsSection);
+  }
+
+  // ── Dynamic Project Pagination (4 projects per page) ──
+  var projectCards = document.querySelectorAll('.project-card');
+  var itemsPerPage = 4;
+  var currentPage = 1;
+  var totalProjects = projectCards.length;
+  var totalPages = Math.ceil(totalProjects / itemsPerPage);
+
+  var projectRangeEl = document.getElementById('project-range');
+  var projectTotalEl = document.getElementById('project-total');
+  var projectPageNumbersEl = document.getElementById('project-page-numbers');
+  var projectPrevBtn = document.getElementById('project-prev-btn');
+  var projectNextBtn = document.getElementById('project-next-btn');
+  var projectPaginationEl = document.getElementById('project-pagination');
+
+  function renderProjectPagination() {
+    if (!projectPaginationEl) return;
+    if (totalProjects <= itemsPerPage) {
+      projectPaginationEl.classList.add('hidden');
+      projectCards.forEach(function (card) {
+        card.classList.remove('page-hidden');
+      });
+      return;
+    }
+    projectPaginationEl.classList.remove('hidden');
+
+    var startIdx = (currentPage - 1) * itemsPerPage;
+    var endIdx = Math.min(startIdx + itemsPerPage, totalProjects);
+    if (projectRangeEl) projectRangeEl.textContent = (startIdx + 1) + '–' + endIdx;
+    if (projectTotalEl) projectTotalEl.textContent = totalProjects;
+
+    projectCards.forEach(function (card, index) {
+      if (index >= startIdx && index < endIdx) {
+        card.classList.remove('page-hidden');
+        card.classList.add('visible');
+      } else {
+        card.classList.add('page-hidden');
+      }
+    });
+
+    if (projectPrevBtn) projectPrevBtn.disabled = currentPage === 1;
+    if (projectNextBtn) projectNextBtn.disabled = currentPage === totalPages;
+
+    if (projectPageNumbersEl) {
+      projectPageNumbersEl.innerHTML = '';
+      for (var i = 1; i <= totalPages; i++) {
+        (function (pageIndex) {
+          var btn = document.createElement('button');
+          btn.className = 'w-9 h-9 rounded-xl flex items-center justify-center text-body-xs font-mono font-medium transition-all shadow-sm ' +
+            (pageIndex === currentPage
+              ? 'bg-primary text-on-primary ring-1 ring-primary-fixed-dim/30 font-semibold'
+              : 'border border-outline-variant/30 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-primary');
+          btn.textContent = pageIndex;
+          btn.setAttribute('aria-label', 'Halaman ' + pageIndex);
+          btn.addEventListener('click', function () {
+            goToProjectPage(pageIndex);
+          });
+          projectPageNumbersEl.appendChild(btn);
+        })(i);
+      }
+    }
+  }
+
+  function goToProjectPage(page) {
+    if (page < 1 || page > totalPages) return;
+    currentPage = page;
+    renderProjectPagination();
+    var projectSec = document.getElementById('project');
+    if (projectSec) {
+      var rect = projectSec.getBoundingClientRect();
+      if (rect.top < -50) {
+        projectSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  if (projectPrevBtn) {
+    projectPrevBtn.addEventListener('click', function () {
+      goToProjectPage(currentPage - 1);
+    });
+  }
+  if (projectNextBtn) {
+    projectNextBtn.addEventListener('click', function () {
+      goToProjectPage(currentPage + 1);
+    });
+  }
+
+  renderProjectPagination();
+
+  // ── Contact Form Handler (Inline Button State) ──
+  var contactForm = document.getElementById('contact-form');
+  var contactSubmitBtn = document.getElementById('contact-submit-btn');
+  var contactBtnText = document.getElementById('contact-btn-text');
+  var contactBtnIcon = document.getElementById('contact-btn-icon');
+  var contactAlertError = document.getElementById('contact-alert-error');
+  var contactErrorText = document.getElementById('contact-error-text');
+
+  if (contactForm && contactSubmitBtn) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var nameInput = document.getElementById('contact-name');
+      var emailInput = document.getElementById('contact-email');
+      var subjectInput = document.getElementById('contact-subject');
+      var messageInput = document.getElementById('contact-message');
+
+      var name = nameInput ? nameInput.value.trim() : '';
+      var email = emailInput ? emailInput.value.trim() : '';
+      var subject = subjectInput ? subjectInput.value.trim() : '';
+      var message = messageInput ? messageInput.value.trim() : '';
+
+      // Simple validation
+      if (!name || !email || !message) {
+        if (contactAlertError) {
+          contactErrorText.textContent = 'Mohon lengkapi Nama, Email, dan Pesan sebelum mengirim.';
+          contactAlertError.classList.remove('hidden');
+        }
+        return;
+      }
+
+      // Email format validation
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        if (contactAlertError) {
+          contactErrorText.textContent = 'Format alamat email yang Anda masukkan tidak valid.';
+          contactAlertError.classList.remove('hidden');
+        }
+        return;
+      }
+
+      if (contactAlertError) contactAlertError.classList.add('hidden');
+
+      // 1. Loading state
+      contactSubmitBtn.disabled = true;
+      contactBtnText.textContent = 'Mengirim Pesan...';
+      contactBtnIcon.textContent = 'hourglass_top';
+      contactBtnIcon.classList.add('animate-spin');
+      contactBtnIcon.classList.remove('hidden');
+
+      fetch('https://formsubmit.co/ajax/rafaelpngrbn496@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Nama: name,
+          Email: email,
+          Subjek: subject || 'Pesan Baru dari Portofolio Rafael',
+          Pesan: message,
+          _subject: 'Pesan Baru Portofolio: ' + (subject || name),
+          _template: 'table',
+          _captcha: 'false'
+        })
+      })
+      .then(function (response) {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('Gagal mengirim email.');
+      })
+      .then(function () {
+        // Reset form inputs
+        contactForm.reset();
+
+        // 2. Success state: Button transforms inline
+        // Text: "Pesan Anda Terkirim!" (tanpa centang)
+        contactBtnText.textContent = 'Pesan Anda Terkirim!';
+        contactBtnIcon.classList.add('hidden');
+        contactBtnIcon.classList.remove('animate-spin');
+
+        // Style: warna hijau/emerald yang elegan dan modern
+        contactSubmitBtn.classList.remove('bg-primary', 'hover:bg-primary/90');
+        contactSubmitBtn.classList.add('bg-emerald-600', 'hover:bg-emerald-700', 'text-white');
+
+        // Kembalikan ke keadaan semula setelah 3.5 detik
+        setTimeout(function () {
+          contactSubmitBtn.classList.remove('bg-emerald-600', 'hover:bg-emerald-700', 'text-white');
+          contactSubmitBtn.classList.add('bg-primary', 'hover:bg-primary/90');
+          contactBtnText.textContent = 'Kirim Pesan';
+          contactBtnIcon.textContent = 'send';
+          contactBtnIcon.classList.remove('hidden');
+          contactSubmitBtn.disabled = false;
+        }, 3500);
+      })
+      .catch(function (err) {
+        if (contactAlertError) {
+          contactErrorText.textContent = 'Terjadi kendala saat mengirim. Silakan coba lagi atau hubungi via WhatsApp / Email.';
+          contactAlertError.classList.remove('hidden');
+        }
+        // Restore button immediately on error
+        contactSubmitBtn.disabled = false;
+        contactBtnText.textContent = 'Kirim Pesan';
+        contactBtnIcon.textContent = 'send';
+        contactBtnIcon.classList.remove('animate-spin', 'hidden');
+      });
+    });
   }
 
   window.addEventListener('scroll', highlightNav, { passive: true });
