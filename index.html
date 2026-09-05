@@ -22,95 +22,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "primary": "rgb(var(--c-primary) / <alpha-value>)",
-        "primary-container": "rgb(var(--c-primary-ctr) / <alpha-value>)",
-        "on-primary": "rgb(var(--c-on-primary) / <alpha-value>)",
-        "on-primary-container": "rgb(var(--c-on-primary-ctr) / <alpha-value>)",
-        "secondary": "rgb(var(--c-secondary) / <alpha-value>)",
-        "secondary-container": "rgb(var(--c-secondary-ctr) / <alpha-value>)",
-        "on-secondary": "rgb(var(--c-on-secondary) / <alpha-value>)",
-        "on-secondary-container": "rgb(var(--c-on-secondary-ctr) / <alpha-value>)",
-        "tertiary": "rgb(var(--c-tertiary) / <alpha-value>)",
-        "tertiary-container": "rgb(var(--c-tertiary-ctr) / <alpha-value>)",
-        "on-tertiary": "rgb(var(--c-on-tertiary) / <alpha-value>)",
-        "on-tertiary-container": "rgb(var(--c-on-tertiary-ctr) / <alpha-value>)",
-        "surface": "rgb(var(--c-surface) / <alpha-value>)",
-        "surface-dim": "rgb(var(--c-surface-dim) / <alpha-value>)",
-        "surface-bright": "rgb(var(--c-surface-brt) / <alpha-value>)",
-        "surface-container-lowest": "rgb(var(--c-srf-lo) / <alpha-value>)",
-        "surface-container-low": "rgb(var(--c-srf-low) / <alpha-value>)",
-        "surface-container": "rgb(var(--c-srf-ctr) / <alpha-value>)",
-        "surface-container-high": "rgb(var(--c-srf-hi) / <alpha-value>)",
-        "surface-container-highest": "rgb(var(--c-srf-hst) / <alpha-value>)",
-        "surface-variant": "rgb(var(--c-surface-var) / <alpha-value>)",
-        "on-surface": "rgb(var(--c-on-surface) / <alpha-value>)",
-        "on-surface-variant": "rgb(var(--c-on-surface-var) / <alpha-value>)",
-        "on-background": "rgb(var(--c-on-bg) / <alpha-value>)",
-        "background": "rgb(var(--c-bg) / <alpha-value>)",
-        "outline": "rgb(var(--c-outline) / <alpha-value>)",
-        "outline-variant": "rgb(var(--c-outline-var) / <alpha-value>)",
-        "primary-fixed": "rgb(var(--c-primary-fx) / <alpha-value>)",
-        "primary-fixed-dim": "rgb(var(--c-primary-fx-d) / <alpha-value>)",
-        "secondary-fixed": "rgb(var(--c-secondary-fx) / <alpha-value>)",
-        "secondary-fixed-dim": "rgb(var(--c-secondary-fx-d) / <alpha-value>)",
-        "tertiary-fixed": "rgb(var(--c-tertiary-fx) / <alpha-value>)",
-        "tertiary-fixed-dim": "rgb(var(--c-tertiary-fx-d) / <alpha-value>)",
-        "surface-tint": "rgb(var(--c-surface-tint) / <alpha-value>)",
-        "inverse-surface": "rgb(var(--c-inv-surface) / <alpha-value>)",
-        "inverse-on-surface": "rgb(var(--c-inv-on-surface) / <alpha-value>)",
-        "inverse-primary": "rgb(var(--c-inv-primary) / <alpha-value>)",
-        "error": "rgb(var(--c-error) / <alpha-value>)",
-        "error-container": "rgb(var(--c-error-ctr) / <alpha-value>)",
-        "on-error": "rgb(var(--c-on-error) / <alpha-value>)",
-        "on-error-container": "rgb(var(--c-on-error-ctr) / <alpha-value>)",
-        "on-primary-fixed": "rgb(var(--c-on-primary-fx) / <alpha-value>)",
-        "on-primary-fixed-variant": "rgb(var(--c-on-primary-fx-v) / <alpha-value>)",
-        "on-secondary-fixed": "rgb(var(--c-on-secondary-fx) / <alpha-value>)",
-        "on-secondary-fixed-variant": "rgb(var(--c-on-secondary-fx-v) / <alpha-value>)",
-        "on-tertiary-fixed": "rgb(var(--c-on-tertiary-fx) / <alpha-value>)",
-        "on-tertiary-fixed-variant": "rgb(var(--c-on-tertiary-fx-v) / <alpha-value>)",
-        "accent-tech": "rgb(var(--c-accent) / <alpha-value>)",
-        "accent-tech-dim": "rgb(var(--c-accent-dim) / <alpha-value>)",
-      },
-      fontFamily: {
-        "display": ["Space Grotesk", "sans-serif"],
-        "heading": ["Space Grotesk", "sans-serif"],
-        "body": ["Inter", "sans-serif"],
-        "mono": ["JetBrains Mono", "monospace"],
-      },
-      fontSize: {
-        "display": ["clamp(2.5rem, 5vw, 3.75rem)", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "700" }],
-        "display-sm": ["clamp(2rem, 4vw, 2.75rem)", { lineHeight: "1.15", letterSpacing: "-0.025em", fontWeight: "700" }],
-        "headline-lg": ["clamp(1.75rem, 3vw, 2.5rem)", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
-        "headline-md": ["clamp(1.25rem, 2.5vw, 1.75rem)", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
-        "headline-sm": ["clamp(1.1rem, 2vw, 1.375rem)", { lineHeight: "1.35", letterSpacing: "-0.005em", fontWeight: "600" }],
-        "title-lg": ["1.125rem", { lineHeight: "1.5", fontWeight: "600" }],
-        "body-lg": ["1.125rem", { lineHeight: "1.7", fontWeight: "400" }],
-        "body-md": ["1rem", { lineHeight: "1.6", fontWeight: "400" }],
-        "body-sm": ["0.875rem", { lineHeight: "1.5", fontWeight: "400" }],
-        "label-lg": ["0.9375rem", { lineHeight: "1.4", letterSpacing: "0.01em", fontWeight: "600" }],
-        "label-md": ["0.8125rem", { lineHeight: "1.4", letterSpacing: "0.02em", fontWeight: "600" }],
-        "label-sm": ["0.6875rem", { lineHeight: "1.3", letterSpacing: "0.04em", fontWeight: "600" }],
-      },
-      animation: {
-        "fade-up": "fadeUp 0.6s ease-out forwards",
-        "fade-in": "fadeIn 0.5s ease-out forwards",
-      },
-      keyframes: {
-        fadeUp: { "0%": { opacity: "0", transform: "translateY(24px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
-        fadeIn: { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
-      },
-    },
-  },
-}
-</script>
+<link rel="stylesheet" href="style.css">
 
 <style>
   /* ── Light Mode Palette ── */
@@ -405,7 +317,7 @@ tailwind.config = {
           <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-secondary/20 via-primary-fixed-dim/25 to-accent-tech/20 blur-2xl scale-105"></div>
           <div class="relative w-full h-full p-2 rounded-3xl bg-surface-container-lowest shadow-2xl ring-1 ring-outline-variant/20 flex flex-col">
             <div class="w-full h-full min-h-[380px] lg:min-h-0 rounded-2xl overflow-hidden bg-surface-container relative">
-              <img alt="Riandika Rafael Jaya Pangaribuan" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" src="profile-original.jpg">
+              <img alt="Riandika Rafael Jaya Pangaribuan" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" src="profile-original.jpg" loading="eager" fetchpriority="high" decoding="async">
             </div>
           </div>
         </div>
@@ -451,27 +363,35 @@ tailwind.config = {
 </section>
 
 <!-- KEY METRICS -->
-<section class="relative w-full py-10 sm:py-12 bg-surface-container-low border-y border-outline-variant/15">
+<section class="relative w-full py-10 sm:py-12 bg-surface-container-low border-y border-outline-variant/15" id="metrics-section">
   <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8" data-animate>
       <!-- Metric 1 -->
       <div class="text-center">
-        <p class="font-display text-display-sm text-primary mb-1">84.000<span class="text-accent-tech">+</span></p>
+        <p class="font-display text-display-sm text-primary mb-1">
+          <span class="counter-val" data-target="84000" data-format="locale">84.000</span><span class="text-accent-tech">+</span>
+        </p>
         <p class="text-body-sm text-on-surface-variant">Baris Data di-Scrape &amp; Diolah</p>
       </div>
       <!-- Metric 2 -->
       <div class="text-center">
-        <p class="font-display text-display-sm text-primary mb-1">99.5<span class="text-accent-tech">%</span></p>
+        <p class="font-display text-display-sm text-primary mb-1">
+          <span class="counter-val" data-target="99.5" data-format="decimal" data-decimals="1">99.5</span><span class="text-accent-tech">%</span>
+        </p>
         <p class="text-body-sm text-on-surface-variant">mAP@50 YOLOv8 Detection</p>
       </div>
       <!-- Metric 3 -->
       <div class="text-center">
-        <p class="font-display text-display-sm text-primary mb-1">5</p>
+        <p class="font-display text-display-sm text-primary mb-1">
+          <span class="counter-val" data-target="5" data-format="integer">5</span>
+        </p>
         <p class="text-body-sm text-on-surface-variant">Proyek Akademik Terpilih</p>
       </div>
       <!-- Metric 4 -->
       <div class="text-center">
-        <p class="font-display text-display-sm text-primary mb-1">2</p>
+        <p class="font-display text-display-sm text-primary mb-1">
+          <span class="counter-val" data-target="2" data-format="integer">2</span>
+        </p>
         <p class="text-body-sm text-on-surface-variant">Magang di Instansi Pemerintah</p>
       </div>
     </div>
@@ -496,7 +416,7 @@ tailwind.config = {
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
           <div class="flex items-center gap-5">
             <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
-              <img src="logo-ui.svg" alt="Logo Universitas Indonesia" class="w-full h-full object-contain">
+              <img src="logo-ui.svg" alt="Logo Universitas Indonesia" class="w-full h-full object-contain" loading="lazy" decoding="async">
             </div>
             <div>
               <div class="flex flex-wrap items-center gap-3 mb-1">
@@ -521,7 +441,7 @@ tailwind.config = {
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
           <div class="flex items-center gap-5">
             <div class="w-14 h-14 sm:w-18 sm:h-18 rounded-xl bg-surface-container p-2 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
-              <img src="logo-sman68.png" alt="Logo SMAN 68 Jakarta" class="w-full h-full object-contain">
+              <img src="logo-sman68.png" alt="Logo SMAN 68 Jakarta" class="w-full h-full object-contain" loading="lazy" decoding="async">
             </div>
             <div>
               <div class="flex flex-wrap items-center gap-3 mb-1">
@@ -562,7 +482,7 @@ tailwind.config = {
         <!-- Python -->
         <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-7 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
           <div class="w-14 h-14 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center mb-5 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
-            <img src="logo-python.svg" alt="Logo Python" class="w-full h-full object-contain">
+            <img src="logo-python.svg" alt="Logo Python" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
           <h4 class="font-heading text-headline-sm text-primary mb-1">Python</h4>
           <p class="text-body-sm text-secondary font-medium">Data Analytics &amp; Automation</p>
@@ -571,7 +491,7 @@ tailwind.config = {
         <!-- R -->
         <div class="bg-surface-container-lowest rounded-xl p-5 lg:p-6 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
           <div class="w-12 h-12 rounded-xl bg-surface-container p-2 flex items-center justify-center mb-4 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
-            <img src="logo-r.svg" alt="Logo R" class="w-full h-full object-contain">
+            <img src="logo-r.svg" alt="Logo R" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
           <h4 class="font-heading text-headline-sm text-primary mb-1">R</h4>
           <p class="text-body-sm text-secondary font-medium">Statistical Computing</p>
@@ -580,7 +500,7 @@ tailwind.config = {
         <!-- Excel -->
         <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-7 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
           <div class="w-14 h-14 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center mb-5 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
-            <img src="logo-excel.svg" alt="Logo Microsoft Excel" class="w-full h-full object-contain">
+            <img src="logo-excel.svg" alt="Logo Microsoft Excel" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
           <h4 class="font-heading text-headline-sm text-primary mb-1">Excel</h4>
           <p class="text-body-sm text-secondary font-medium">Spreadsheet &amp; Modeling</p>
@@ -589,7 +509,7 @@ tailwind.config = {
         <!-- SQL -->
         <div class="bg-surface-container-lowest rounded-xl p-5 lg:p-6 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
           <div class="w-12 h-12 rounded-xl bg-surface-container p-2 flex items-center justify-center mb-4 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
-            <img src="logo-mysql.svg" alt="Logo MySQL" class="w-full h-full object-contain">
+            <img src="logo-mysql.svg" alt="Logo MySQL" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
           <h4 class="font-heading text-headline-sm text-primary mb-1">SQL (MySQL)</h4>
           <p class="text-body-sm text-secondary font-medium">RDBMS &amp; Query Optimization</p>
@@ -670,7 +590,7 @@ tailwind.config = {
         <!-- DPR RI -->
         <div class="relative flex items-start gap-5 md:gap-8" data-animate>
           <div class="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-surface-container-lowest p-2 flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
-            <img src="logo-dpr.svg" alt="Logo DPR RI" class="w-full h-full object-contain">
+            <img src="logo-dpr.svg" alt="Logo DPR RI" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
           <div class="w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-5">
@@ -714,7 +634,7 @@ tailwind.config = {
         <!-- Bappenas -->
         <div class="relative flex items-start gap-5 md:gap-8" data-animate>
           <div class="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-surface-container-lowest p-2 flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
-            <img src="logo-bappenas.png" alt="Logo Kementerian PPN/Bappenas" class="w-full h-full object-contain">
+            <img src="logo-bappenas.png" alt="Logo Kementerian PPN/Bappenas" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
           <div class="w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-5">
@@ -773,7 +693,7 @@ tailwind.config = {
       <!-- Project 1: Sistem Basis Data Perbankan -->
       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/World_Bank_Group_headquarters.jpg/1280px-World_Bank_Group_headquarters.jpg" alt="World Bank Building" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/World_Bank_Group_headquarters.jpg/1280px-World_Bank_Group_headquarters.jpg" alt="World Bank Building" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
           <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
             <span class="px-2.5 py-1 rounded-lg bg-slate-950/60 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm">Database untuk Sains Data</span>
@@ -819,7 +739,7 @@ tailwind.config = {
       <!-- Project 2: Analisis Multivariat MANOVA -->
       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Analisis Multivariat MANOVA" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Analisis Multivariat MANOVA" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
           <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
             <span class="px-2.5 py-1 rounded-lg bg-slate-950/60 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm">Pengantar Multivariat</span>
@@ -865,7 +785,7 @@ tailwind.config = {
       <!-- Project 3: Customer Personality Analysis -->
       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Customer Personality Analysis" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Customer Personality Analysis" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
           <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
             <span class="px-2.5 py-1 rounded-lg bg-slate-950/60 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm">Analisis Multivariat</span>
@@ -911,7 +831,7 @@ tailwind.config = {
       <!-- Project 4: Peramalan Saham IBM -->
       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80" alt="Peramalan Saham IBM" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80" alt="Peramalan Saham IBM" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
           <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
             <span class="px-2.5 py-1 rounded-lg bg-slate-950/60 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm">Metode Peramalan</span>
@@ -957,7 +877,7 @@ tailwind.config = {
       <!-- Project 5: Playing Cards Detection YOLOv8 -->
       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
-          <img src="Project/UAS%20Andat%20TT.png" alt="Playing Cards Detection YOLOv8 Poster" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <img src="Project/UAS%20Andat%20TT.png" alt="Playing Cards Detection YOLOv8 Poster" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
           <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
             <span class="px-2.5 py-1 rounded-lg bg-slate-950/60 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm">Analisis Data Tidak Terstruktur</span>
@@ -1138,6 +1058,69 @@ tailwind.config = {
       }
     });
   }
+  // ── Animated Counter on Key Metrics ──
+  var counters = document.querySelectorAll('.counter-val');
+  var animatedCounters = false;
+
+  function easeOutExpo(x) {
+    return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
+  }
+
+  function startCounters() {
+    if (animatedCounters) return;
+    animatedCounters = true;
+
+    var duration = 1800; // ms
+    var startTime = null;
+
+    var counterData = Array.prototype.map.call(counters, function (el) {
+      return {
+        element: el,
+        target: parseFloat(el.getAttribute('data-target')),
+        format: el.getAttribute('data-format') || 'integer',
+        decimals: parseInt(el.getAttribute('data-decimals') || '0', 10)
+      };
+    });
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var easeProgress = easeOutExpo(progress);
+
+      counterData.forEach(function (c) {
+        var current = easeProgress * c.target;
+        if (progress === 1) current = c.target;
+
+        if (c.format === 'locale') {
+          c.element.textContent = Math.round(current).toLocaleString('id-ID');
+        } else if (c.format === 'decimal') {
+          c.element.textContent = current.toFixed(c.decimals);
+        } else {
+          c.element.textContent = Math.round(current);
+        }
+      });
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  var metricsSection = document.getElementById('metrics-section');
+  if (metricsSection) {
+    var metricsObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          startCounters();
+          metricsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    metricsObserver.observe(metricsSection);
+  }
+
   window.addEventListener('scroll', highlightNav, { passive: true });
   highlightNav();
 })();

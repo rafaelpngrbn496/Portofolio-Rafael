@@ -12,3 +12,6 @@ logo-dpr.png
 Thumbs.db
 desktop.ini
 *.ini
+
+# Tools & binaries
+tailwindcss.exe
