@@ -136,7 +136,7 @@
   }
 
   /* ── Base ── */
-  html, body { margin: 0; padding: 0; }
+  html, body { margin: 0; padding: 0; overflow-x: hidden; }
   body {
     overscroll-behavior: none;
     font-family: 'Inter', sans-serif;
@@ -193,17 +193,17 @@
   #mobile-menu {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease, opacity 0.25s ease;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
     opacity: 0;
   }
   #mobile-menu.open {
-    max-height: 320px;
+    max-height: 380px;
     opacity: 1;
   }
   .nav-link {
     position: relative;
-    padding: 0.4rem 0.75rem;
-    border-radius: 0.5rem;
+    padding: 0.5rem 0.875rem;
+    border-radius: 0.625rem;
     font-weight: 500;
     transition: color 0.2s, background-color 0.2s;
   }
@@ -287,36 +287,36 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="lg:hidden border-t border-outline-variant/15 bg-surface-container-lowest">
-    <nav class="flex flex-col gap-0.5 px-4 py-3">
-      <a href="#profile" class="mobile-link nav-link text-body-md text-on-surface-variant py-2.5">Beranda</a>
-      <a href="#education" class="mobile-link nav-link text-body-md text-on-surface-variant py-2.5">Pendidikan</a>
-      <a href="#skills" class="mobile-link nav-link text-body-md text-on-surface-variant py-2.5">Kemampuan</a>
-      <a href="#magang" class="mobile-link nav-link text-body-md text-on-surface-variant py-2.5">Magang</a>
-      <a href="#project" class="mobile-link nav-link text-body-md text-on-surface-variant py-2.5">Project</a>
+  <div id="mobile-menu" class="lg:hidden border-t border-outline-variant/15 bg-surface-container-lowest shadow-lg">
+    <nav class="flex flex-col gap-1 px-4 py-3 sm:px-6">
+      <a href="#profile" class="mobile-link nav-link min-h-[44px] flex items-center text-body-md text-on-surface-variant px-3 py-2 rounded-xl active:bg-surface-container">Beranda</a>
+      <a href="#education" class="mobile-link nav-link min-h-[44px] flex items-center text-body-md text-on-surface-variant px-3 py-2 rounded-xl active:bg-surface-container">Pendidikan</a>
+      <a href="#skills" class="mobile-link nav-link min-h-[44px] flex items-center text-body-md text-on-surface-variant px-3 py-2 rounded-xl active:bg-surface-container">Kemampuan</a>
+      <a href="#magang" class="mobile-link nav-link min-h-[44px] flex items-center text-body-md text-on-surface-variant px-3 py-2 rounded-xl active:bg-surface-container">Magang</a>
+      <a href="#project" class="mobile-link nav-link min-h-[44px] flex items-center text-body-md text-on-surface-variant px-3 py-2 rounded-xl active:bg-surface-container">Project</a>
     </nav>
   </div>
 </header>
 
-<main class="w-full bg-background">
+<main class="w-full bg-background overflow-x-hidden">
 
 <!-- HERO PROFILE -->
-<section class="relative w-full pt-16 sm:pt-20 lg:pt-28 pb-20 sm:pb-24 lg:pb-32 overflow-hidden" id="profile">
+<section class="relative w-full pt-14 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 lg:pb-32 overflow-hidden" id="profile">
   <div class="absolute inset-0 tech-grid"></div>
-  <div class="absolute inset-0 pointer-events-none">
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
     <div class="absolute -top-20 -left-20 w-[30rem] h-[30rem] rounded-full bg-secondary-container/15 blur-[100px]"></div>
     <div class="absolute top-1/3 right-0 w-[35rem] h-[35rem] rounded-full bg-primary-fixed/20 blur-[120px]"></div>
     <div class="absolute bottom-0 left-1/3 w-[25rem] h-[25rem] rounded-full bg-tertiary-fixed-dim/15 blur-[80px]"></div>
   </div>
 
-  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
-    <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-14 xl:gap-16">
+  <div class="relative w-full px-4 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 sm:gap-10 lg:gap-14 xl:gap-16">
       <!-- Profile Image -->
-      <div class="w-full max-w-[320px] sm:max-w-[360px] lg:w-72 xl:w-80 shrink-0 self-stretch flex flex-col" data-animate>
+      <div class="w-full max-w-[260px] sm:max-w-[320px] md:max-w-[340px] lg:w-72 xl:w-80 shrink-0 self-center lg:self-stretch flex flex-col" data-animate>
         <div class="relative w-full h-full flex-1">
           <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-secondary/20 via-primary-fixed-dim/25 to-accent-tech/20 blur-2xl scale-105"></div>
           <div class="relative w-full h-full p-2 rounded-3xl bg-surface-container-lowest shadow-2xl ring-1 ring-outline-variant/20 flex flex-col">
-            <div class="w-full h-full min-h-[380px] lg:min-h-0 rounded-2xl overflow-hidden bg-surface-container relative">
+            <div class="w-full h-full aspect-[4/5] sm:aspect-[3/4] lg:aspect-auto rounded-2xl overflow-hidden bg-surface-container relative">
               <img alt="Riandika Rafael Jaya Pangaribuan" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" src="profile-original.jpg" loading="eager" fetchpriority="high" decoding="async">
             </div>
           </div>
@@ -326,9 +326,9 @@
       <!-- Text Content -->
       <div class="flex-1 flex flex-col justify-between text-center lg:text-left py-1" data-animate>
         <div>
-          <h1 class="font-display text-display text-primary mb-3">Riandika Rafael Jaya Pangaribuan</h1>
-          <p class="font-heading text-headline-md text-secondary mb-4">Data Analyst &amp; Business Intelligence</p>
-          <div class="space-y-3.5 text-body-md sm:text-body-lg text-on-surface-variant leading-relaxed mb-6 max-w-2xl lg:max-w-none">
+          <h1 class="font-display text-[1.875rem] sm:text-[2.25rem] md:text-display text-primary mb-3 break-words">Riandika Rafael Jaya Pangaribuan</h1>
+          <p class="font-heading text-headline-sm sm:text-headline-md text-secondary mb-4">Data Analyst &amp; Business Intelligence</p>
+          <div class="space-y-3 sm:space-y-3.5 text-body-sm sm:text-body-lg text-on-surface-variant leading-relaxed mb-6 max-w-2xl lg:max-w-none">
             <p>
               Mahasiswa S1 Statistika Universitas Indonesia yang berfokus pada analisis data, pemodelan statistik, dan business intelligence. Terbiasa mengolah data mentah menjadi wawasan yang terstruktur dan aplikatif untuk mendukung pengambilan keputusan strategis.
             </p>
@@ -342,20 +342,22 @@
         </div>
 
         <!-- Contact Row -->
-        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-          <a href="mailto:rafaelpngrbn496@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container hover:shadow-lg transition-all text-label-lg font-body shadow-sm">
-            <span class="material-symbols-outlined text-[18px]">mail</span>
-            <span>rafaelpngrbn496@gmail.com</span>
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3 pt-2">
+          <a href="mailto:rafaelpngrbn496@gmail.com" class="inline-flex items-center justify-center gap-2 px-3.5 sm:px-5 py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container hover:shadow-lg transition-all text-label-md sm:text-label-lg font-body shadow-sm max-w-full">
+            <span class="material-symbols-outlined text-[18px] shrink-0">mail</span>
+            <span class="truncate">rafaelpngrbn496@gmail.com</span>
           </a>
-          <a href="https://wa.me/6287880878450" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.67-1.18.21-.59.21-1.09.15-1.18-.06-.1-.23-.17-.48-.3z"></path></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/riandikarafael" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
-          </a>
-          <a href="https://www.instagram.com/rafaelpngrbn_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-          </a>
+          <div class="flex items-center gap-2">
+            <a href="https://wa.me/6287880878450" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.67-1.18.21-.59.21-1.09.15-1.18-.06-.1-.23-.17-.48-.3z"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/riandikarafael" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+            </a>
+            <a href="https://www.instagram.com/rafaelpngrbn_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-surface-container-high/80 text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm ring-1 ring-outline-variant/20">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -364,45 +366,45 @@
 
 <!-- KEY METRICS -->
 <section class="relative w-full py-10 sm:py-12 bg-surface-container-low border-y border-outline-variant/15" id="metrics-section">
-  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8" data-animate>
+  <div class="relative w-full px-4 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8" data-animate>
       <!-- Metric 1 -->
-      <div class="text-center">
-        <p class="font-display text-display-sm text-primary mb-1">
+      <div class="text-center flex flex-col items-center justify-center p-2">
+        <p class="font-display text-headline-md sm:text-display-sm text-primary mb-1 inline-flex items-center justify-center whitespace-nowrap">
           <span class="counter-val" data-target="84000" data-format="locale">84.000</span><span class="text-accent-tech">+</span>
         </p>
-        <p class="text-body-sm text-on-surface-variant">Baris Data di-Scrape &amp; Diolah</p>
+        <p class="text-[12px] sm:text-body-sm text-on-surface-variant">Baris Data di-Scrape &amp; Diolah</p>
       </div>
       <!-- Metric 2 -->
-      <div class="text-center">
-        <p class="font-display text-display-sm text-primary mb-1">
+      <div class="text-center flex flex-col items-center justify-center p-2">
+        <p class="font-display text-headline-md sm:text-display-sm text-primary mb-1 inline-flex items-center justify-center whitespace-nowrap">
           <span class="counter-val" data-target="99.5" data-format="decimal" data-decimals="1">99.5</span><span class="text-accent-tech">%</span>
         </p>
-        <p class="text-body-sm text-on-surface-variant">mAP@50 YOLOv8 Detection</p>
+        <p class="text-[12px] sm:text-body-sm text-on-surface-variant">mAP@50 YOLOv8 Detection</p>
       </div>
       <!-- Metric 3 -->
-      <div class="text-center">
-        <p class="font-display text-display-sm text-primary mb-1">
+      <div class="text-center flex flex-col items-center justify-center p-2">
+        <p class="font-display text-headline-md sm:text-display-sm text-primary mb-1 inline-flex items-center justify-center whitespace-nowrap">
           <span class="counter-val" data-target="5" data-format="integer">5</span>
         </p>
-        <p class="text-body-sm text-on-surface-variant">Proyek Akademik Terpilih</p>
+        <p class="text-[12px] sm:text-body-sm text-on-surface-variant">Proyek Akademik Terpilih</p>
       </div>
       <!-- Metric 4 -->
-      <div class="text-center">
-        <p class="font-display text-display-sm text-primary mb-1">
+      <div class="text-center flex flex-col items-center justify-center p-2">
+        <p class="font-display text-headline-md sm:text-display-sm text-primary mb-1 inline-flex items-center justify-center whitespace-nowrap">
           <span class="counter-val" data-target="2" data-format="integer">2</span>
         </p>
-        <p class="text-body-sm text-on-surface-variant">Magang di Instansi Pemerintah</p>
+        <p class="text-[12px] sm:text-body-sm text-on-surface-variant">Magang di Instansi Pemerintah</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PENDIDIKAN -->
-<section class="relative w-full py-16 sm:py-20 lg:py-24 bg-surface-container-low" id="education">
+<section class="relative w-full py-14 sm:py-20 lg:py-24 bg-surface-container-low" id="education">
   <div class="absolute inset-0 dot-pattern opacity-50"></div>
-  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
-    <div class="mb-10 lg:mb-14" data-animate>
+  <div class="relative w-full px-4 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="mb-8 sm:mb-10 lg:mb-14" data-animate>
       <div class="inline-flex items-center gap-2 text-secondary text-label-sm uppercase tracking-widest mb-3">
         <span class="material-symbols-outlined text-[16px]">school</span>
         <span>Riwayat Akademik</span>
@@ -412,24 +414,24 @@
 
     <div class="space-y-4 sm:space-y-5">
       <!-- Universitas Indonesia -->
-      <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-7 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover" data-animate>
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
-          <div class="flex items-center gap-5">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
+      <div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover" data-animate>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-5">
+          <div class="flex items-start sm:items-center gap-3.5 sm:gap-5">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl bg-surface-container p-2 sm:p-2.5 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
               <img src="logo-ui.svg" alt="Logo Universitas Indonesia" class="w-full h-full object-contain" loading="lazy" decoding="async">
             </div>
             <div>
-              <div class="flex flex-wrap items-center gap-3 mb-1">
-                <h3 class="font-heading text-headline-sm text-primary">Universitas Indonesia</h3>
-                <span class="px-2.5 py-0.5 rounded-full bg-accent-tech/10 text-accent-tech-dim text-label-sm font-semibold ring-1 ring-accent-tech/20 font-mono">Mahasiswa Aktif</span>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-heading text-title-lg sm:text-headline-sm text-primary">Universitas Indonesia</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-accent-tech/10 text-accent-tech-dim text-[11px] sm:text-label-sm font-semibold ring-1 ring-accent-tech/20 font-mono">Mahasiswa Aktif</span>
               </div>
-              <p class="text-title-lg text-secondary font-medium font-heading">S1 Statistika <span class="font-normal text-on-surface-variant font-body">(Departemen Matematika / FMIPA)</span></p>
-              <p class="text-body-sm text-on-surface-variant mt-0.5">Depok, Jawa Barat, Indonesia</p>
+              <p class="text-body-md sm:text-title-lg text-secondary font-medium font-heading">S1 Statistika <span class="font-normal text-on-surface-variant font-body text-body-sm sm:text-base">(Departemen Matematika / FMIPA)</span></p>
+              <p class="text-body-xs sm:text-body-sm text-on-surface-variant mt-0.5">Depok, Jawa Barat, Indonesia</p>
             </div>
           </div>
-          <div class="shrink-0">
-            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container text-primary text-label-md ring-1 ring-outline-variant/15 font-mono">
-              <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+          <div class="w-full sm:w-auto shrink-0 pt-2 sm:pt-0 border-t border-outline-variant/15 sm:border-0">
+            <span class="inline-flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container text-primary text-label-sm sm:text-label-md ring-1 ring-outline-variant/15 font-mono">
+              <span class="material-symbols-outlined text-[16px] sm:text-[18px]">calendar_today</span>
               <span>2023 – 2027 (Est.)</span>
             </span>
           </div>
@@ -437,24 +439,24 @@
       </div>
 
       <!-- SMAN 68 Jakarta -->
-      <div class="bg-surface-container-lowest rounded-2xl p-5 sm:p-6 lg:p-7 shadow-sm ring-1 ring-outline-variant/15 card-hover" data-animate>
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
-          <div class="flex items-center gap-5">
-            <div class="w-14 h-14 sm:w-18 sm:h-18 rounded-xl bg-surface-container p-2 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
+      <div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover" data-animate>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-5">
+          <div class="flex items-start sm:items-center gap-3.5 sm:gap-5">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl bg-surface-container p-2 sm:p-2.5 flex items-center justify-center shrink-0 shadow-sm ring-1 ring-outline-variant/20">
               <img src="logo-sman68.png" alt="Logo SMAN 68 Jakarta" class="w-full h-full object-contain" loading="lazy" decoding="async">
             </div>
             <div>
-              <div class="flex flex-wrap items-center gap-3 mb-1">
-                <h3 class="font-heading text-headline-sm text-primary">SMAN 68 Jakarta</h3>
-                <span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary text-label-sm font-semibold ring-1 ring-secondary/20 font-mono">Alumni</span>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-heading text-title-lg sm:text-headline-sm text-primary">SMAN 68 Jakarta</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary text-[11px] sm:text-label-sm font-semibold ring-1 ring-secondary/20 font-mono">Alumni</span>
               </div>
-              <p class="text-title-lg text-secondary font-medium font-heading">MIPA <span class="font-normal text-on-surface-variant font-body">(Matematika dan Ilmu Pengetahuan Alam)</span></p>
-              <p class="text-body-sm text-on-surface-variant mt-0.5">Jakarta Pusat, DKI Jakarta, Indonesia</p>
+              <p class="text-body-md sm:text-title-lg text-secondary font-medium font-heading">MIPA <span class="font-normal text-on-surface-variant font-body text-body-sm sm:text-base">(Matematika dan Ilmu Pengetahuan Alam)</span></p>
+              <p class="text-body-xs sm:text-body-sm text-on-surface-variant mt-0.5">Jakarta Pusat, DKI Jakarta, Indonesia</p>
             </div>
           </div>
-          <div class="shrink-0">
-            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container text-primary text-label-md ring-1 ring-outline-variant/15 font-mono">
-              <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+          <div class="w-full sm:w-auto shrink-0 pt-2 sm:pt-0 border-t border-outline-variant/15 sm:border-0">
+            <span class="inline-flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container text-primary text-label-sm sm:text-label-md ring-1 ring-outline-variant/15 font-mono">
+              <span class="material-symbols-outlined text-[16px] sm:text-[18px]">calendar_today</span>
               <span>2020 – 2023</span>
             </span>
           </div>
@@ -467,8 +469,8 @@
 <!-- KEMAMPUAN -->
 <section class="relative w-full py-14 sm:py-18 lg:py-22 bg-surface" id="skills">
   <div class="absolute inset-0 tech-grid"></div>
-  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
-    <div class="mb-10 lg:mb-12" data-animate>
+  <div class="relative w-full px-4 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="mb-8 sm:mb-10 lg:mb-12" data-animate>
       <div class="inline-flex items-center gap-2 text-secondary text-label-sm uppercase tracking-widest mb-3">
         <span class="material-symbols-outlined text-[16px]">domain_verification</span>
         <span>Kemampuan</span>
@@ -477,93 +479,93 @@
     </div>
 
     <!-- Software -->
-    <div class="mb-8 lg:mb-10" data-animate>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+    <div class="mb-6 sm:mb-8 lg:mb-10" data-animate>
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
         <!-- Python -->
-        <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-7 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
-          <div class="w-14 h-14 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center mb-5 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
+        <div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-5 lg:p-6 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-surface-container p-2 sm:p-2.5 flex items-center justify-center mb-3 sm:mb-4 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
             <img src="logo-python.svg" alt="Logo Python" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
-          <h4 class="font-heading text-headline-sm text-primary mb-1">Python</h4>
-          <p class="text-body-sm text-secondary font-medium">Data Analytics &amp; Automation</p>
+          <h4 class="font-heading text-title-md sm:text-headline-sm text-primary mb-0.5 sm:mb-1">Python</h4>
+          <p class="text-body-xs sm:text-body-sm text-secondary font-medium">Data Analytics &amp; Automation</p>
         </div>
 
         <!-- R -->
-        <div class="bg-surface-container-lowest rounded-xl p-5 lg:p-6 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
-          <div class="w-12 h-12 rounded-xl bg-surface-container p-2 flex items-center justify-center mb-4 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
+        <div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-5 lg:p-6 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-surface-container p-2 sm:p-2.5 flex items-center justify-center mb-3 sm:mb-4 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
             <img src="logo-r.svg" alt="Logo R" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
-          <h4 class="font-heading text-headline-sm text-primary mb-1">R</h4>
-          <p class="text-body-sm text-secondary font-medium">Statistical Computing</p>
+          <h4 class="font-heading text-title-md sm:text-headline-sm text-primary mb-0.5 sm:mb-1">R</h4>
+          <p class="text-body-xs sm:text-body-sm text-secondary font-medium">Statistical Computing</p>
         </div>
 
         <!-- Excel -->
-        <div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-7 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
-          <div class="w-14 h-14 rounded-2xl bg-surface-container p-2.5 flex items-center justify-center mb-5 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
+        <div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-5 lg:p-6 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-surface-container p-2 sm:p-2.5 flex items-center justify-center mb-3 sm:mb-4 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
             <img src="logo-excel.svg" alt="Logo Microsoft Excel" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
-          <h4 class="font-heading text-headline-sm text-primary mb-1">Excel</h4>
-          <p class="text-body-sm text-secondary font-medium">Spreadsheet &amp; Modeling</p>
+          <h4 class="font-heading text-title-md sm:text-headline-sm text-primary mb-0.5 sm:mb-1">Excel</h4>
+          <p class="text-body-xs sm:text-body-sm text-secondary font-medium">Spreadsheet &amp; Modeling</p>
         </div>
 
         <!-- SQL -->
-        <div class="bg-surface-container-lowest rounded-xl p-5 lg:p-6 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
-          <div class="w-12 h-12 rounded-xl bg-surface-container p-2 flex items-center justify-center mb-4 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
+        <div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-5 lg:p-6 shadow-sm ring-1 ring-outline-variant/15 card-hover flex flex-col group">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-surface-container p-2 sm:p-2.5 flex items-center justify-center mb-3 sm:mb-4 shadow-sm ring-1 ring-outline-variant/15 group-hover:scale-110 transition-transform">
             <img src="logo-mysql.svg" alt="Logo MySQL" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
-          <h4 class="font-heading text-headline-sm text-primary mb-1">SQL (MySQL)</h4>
-          <p class="text-body-sm text-secondary font-medium">RDBMS &amp; Query Optimization</p>
+          <h4 class="font-heading text-title-md sm:text-headline-sm text-primary mb-0.5 sm:mb-1">SQL (MySQL)</h4>
+          <p class="text-body-xs sm:text-body-sm text-secondary font-medium">RDBMS &amp; Query Optimization</p>
         </div>
       </div>
     </div>
 
     <!-- Soft Skills -->
-    <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm ring-1 ring-outline-variant/15" data-animate>
-      <div class="flex items-center gap-4 mb-6 pb-6 border-b border-outline-variant/15">
-        <div class="w-12 h-12 rounded-xl bg-accent-tech/10 flex items-center justify-center text-accent-tech-dim">
-          <span class="material-symbols-outlined text-[26px]">psychology</span>
+    <div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm ring-1 ring-outline-variant/15" data-animate>
+      <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-outline-variant/15">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-accent-tech/10 flex items-center justify-center text-accent-tech-dim shrink-0">
+          <span class="material-symbols-outlined text-[22px] sm:text-[26px]">psychology</span>
         </div>
-        <h3 class="font-heading text-headline-sm text-primary">Soft Skills</h3>
+        <h3 class="font-heading text-title-lg sm:text-headline-sm text-primary">Soft Skills</h3>
       </div>
-      <div class="flex flex-wrap gap-2.5 sm:gap-3">
-        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
-          <span class="material-symbols-outlined text-[18px] text-secondary">analytics</span>
+      <div class="flex flex-wrap gap-2 sm:gap-2.5">
+        <span class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-[12px] sm:text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-secondary shrink-0">analytics</span>
           <span>Analytical Thinking</span>
         </span>
-        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
-          <span class="material-symbols-outlined text-[18px] text-secondary">psychology_alt</span>
+        <span class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-[12px] sm:text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-secondary shrink-0">psychology_alt</span>
           <span>Critical Thinking</span>
         </span>
-        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
-          <span class="material-symbols-outlined text-[18px] text-secondary">lightbulb</span>
+        <span class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-[12px] sm:text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-secondary shrink-0">lightbulb</span>
           <span>Problem Solving</span>
         </span>
-        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
-          <span class="material-symbols-outlined text-[18px] text-secondary">center_focus_strong</span>
+        <span class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-[12px] sm:text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-secondary shrink-0">center_focus_strong</span>
           <span>Attention to Detail</span>
         </span>
-        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
-          <span class="material-symbols-outlined text-[18px] text-secondary">manage_search</span>
+        <span class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-[12px] sm:text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-secondary shrink-0">manage_search</span>
           <span>Research Skills</span>
         </span>
-        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
-          <span class="material-symbols-outlined text-[18px] text-secondary">calculate</span>
+        <span class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-[12px] sm:text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-secondary shrink-0">calculate</span>
           <span>Quantitative Reasoning</span>
         </span>
-        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
-          <span class="material-symbols-outlined text-[18px] text-secondary">forum</span>
+        <span class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-[12px] sm:text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-secondary shrink-0">forum</span>
           <span>Effective Communication</span>
         </span>
-        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
-          <span class="material-symbols-outlined text-[18px] text-secondary">groups</span>
+        <span class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-[12px] sm:text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-secondary shrink-0">groups</span>
           <span>Team Collaboration</span>
         </span>
-        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
-          <span class="material-symbols-outlined text-[18px] text-secondary">diversity_3</span>
+        <span class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-[12px] sm:text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-secondary shrink-0">diversity_3</span>
           <span>Stakeholder Management</span>
         </span>
-        <span class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-label-md hover:bg-primary-fixed/40 transition-colors">
-          <span class="material-symbols-outlined text-[18px] text-secondary">sync_alt</span>
+        <span class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-surface-container border border-outline-variant/20 text-primary text-[12px] sm:text-label-md hover:bg-primary-fixed/40 transition-colors">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-secondary shrink-0">sync_alt</span>
           <span>Adaptability</span>
         </span>
       </div>
@@ -572,10 +574,10 @@
 </section>
 
 <!-- PENGALAMAN MAGANG -->
-<section class="relative w-full py-16 sm:py-20 lg:py-24 bg-surface-container-low" id="magang">
+<section class="relative w-full py-14 sm:py-20 lg:py-24 bg-surface-container-low" id="magang">
   <div class="absolute inset-0 tech-grid-dense opacity-40"></div>
-  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
-    <div class="mb-10 lg:mb-14" data-animate>
+  <div class="relative w-full px-4 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="mb-8 sm:mb-10 lg:mb-14" data-animate>
       <div class="inline-flex items-center gap-2 text-secondary text-label-sm uppercase tracking-widest mb-3">
         <span class="material-symbols-outlined text-[16px]">work_history</span>
         <span>Jejak Profesional</span>
@@ -584,89 +586,89 @@
     </div>
 
     <div class="relative">
-      <div class="absolute top-4 bottom-4 left-6 md:left-8 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent-tech opacity-30"></div>
-      <div class="space-y-8 lg:space-y-10">
+      <div class="absolute top-4 bottom-4 left-6 md:left-8 w-0.5 -translate-x-1/2 bg-gradient-to-b from-primary via-secondary to-accent-tech opacity-30"></div>
+      <div class="space-y-6 sm:space-y-8 lg:space-y-10">
 
         <!-- DPR RI -->
-        <div class="relative flex items-start gap-5 md:gap-8" data-animate>
-          <div class="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-surface-container-lowest p-2 flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
+        <div class="relative flex items-start gap-3 sm:gap-6 md:gap-8" data-animate>
+          <div class="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-surface-container-lowest p-2 flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
             <img src="logo-dpr.svg" alt="Logo DPR RI" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
-          <div class="w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-5">
+          <div class="w-full bg-surface-container-lowest rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 sm:gap-3 mb-4 sm:mb-5">
               <div>
-                <span class="text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Juli 2026 – September 2026</span>
-                <h3 class="font-heading text-headline-sm text-primary mt-1">Statistician Intern</h3>
-                <p class="text-title-lg text-secondary font-medium font-heading">Dewan Perwakilan Rakyat RI <span class="font-normal text-on-surface-variant font-body text-body-sm block sm:inline sm:ml-1">(Pusat Teknologi Informasi)</span></p>
+                <span class="text-[11px] sm:text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Juli 2026 – September 2026</span>
+                <h3 class="font-heading text-title-lg sm:text-headline-sm text-primary mt-0.5">Statistician Intern</h3>
+                <p class="text-body-md sm:text-title-lg text-secondary font-medium font-heading">Dewan Perwakilan Rakyat RI <span class="font-normal text-on-surface-variant font-body text-body-sm block sm:inline sm:ml-1">(Pusat Teknologi Informasi)</span></p>
               </div>
-              <span class="self-start md:self-auto px-3 py-1.5 rounded-xl bg-surface-container text-primary text-label-sm ring-1 ring-outline-variant/15 font-mono shrink-0">Jakarta, Indonesia</span>
+              <span class="self-start md:self-auto px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-surface-container text-primary text-[11px] sm:text-label-sm ring-1 ring-outline-variant/15 font-mono shrink-0">Jakarta, Indonesia</span>
             </div>
-            <ul class="space-y-3.5 text-body-sm sm:text-body-md text-on-surface-variant mb-6">
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
+            <ul class="space-y-2.5 sm:space-y-3.5 text-body-xs sm:text-body-md text-on-surface-variant mb-4 sm:mb-6">
+              <li class="flex items-start gap-2.5 sm:gap-3">
+                <span class="material-symbols-outlined text-[18px] sm:text-[20px] text-accent-tech shrink-0 mt-0.5">check_circle</span>
                 <span>Memproses dan menganalisis 4.000+ baris data aspirasi publik terkait RUU dan undang-undang melalui <em>text cleaning</em>, visualisasi <em>word cloud</em>, dan analisis sentimen (menghasilkan proporsi 40,8% positif, 23,3% netral, dan 35,9% negatif).</span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">trending_up</span>
+              <li class="flex items-start gap-2.5 sm:gap-3">
+                <span class="material-symbols-outlined text-[18px] sm:text-[20px] text-accent-tech shrink-0 mt-0.5">trending_up</span>
                 <span>Mengembangkan model Regresi Logistik Ordinal untuk menguji pengaruh variabel makroekonomi (Inflasi, PDB, dan Tingkat Pengangguran Terbuka/TPT) terhadap sentimen publik pada tiga klaster RUU (Polhukam, Ekonomi, dan Sosial-Budaya), membuktikan bahwa substansi legislasi merupakan faktor determinan utama dibanding indikator makro.</span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">terminal</span>
+              <li class="flex items-start gap-2.5 sm:gap-3">
+                <span class="material-symbols-outlined text-[18px] sm:text-[20px] text-accent-tech shrink-0 mt-0.5">terminal</span>
                 <span>Merancang skrip <em>automated web scraping</em> untuk memproduksi dataset publik berskala besar, mencakup 84.332 baris penyelarasan kode wilayah BPS–Kemendagri hingga tingkat desa/kelurahan, 15.035 baris data program nasional (Radar MBG), serta ekstraksi data tabular dari PDF Satu Data Indonesia.</span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">map</span>
+              <li class="flex items-start gap-2.5 sm:gap-3">
+                <span class="material-symbols-outlined text-[18px] sm:text-[20px] text-accent-tech shrink-0 mt-0.5">map</span>
                 <span>Menstandardisasi metadata geospasial menggunakan CatMDEdit, menyusun <em>Manual Book</em> resmi, serta memfasilitasi sesi Bimbingan Teknis (Bimtek) dalam peluncuran Website SMART DPR RI dan platform partisipasi publik Simasleg.</span>
               </li>
             </ul>
-            <div class="flex flex-wrap items-center gap-2 pt-4 border-t border-outline-variant/15">
-              <span class="text-label-sm font-mono text-secondary mr-1">Skills:</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Regresi Logistik Ordinal</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Analisis Sentimen &amp; NLP</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Web Scraping (Python)</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Data Wrangling</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Metadata Geospasial</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Technical Writing &amp; Bimtek</span>
+            <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-3 sm:pt-4 border-t border-outline-variant/15">
+              <span class="text-[11px] sm:text-label-sm font-mono text-secondary mr-1">Skills:</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Regresi Logistik Ordinal</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Analisis Sentimen &amp; NLP</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Web Scraping (Python)</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Data Wrangling</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Metadata Geospasial</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Technical Writing &amp; Bimtek</span>
             </div>
           </div>
         </div>
 
         <!-- Bappenas -->
-        <div class="relative flex items-start gap-5 md:gap-8" data-animate>
-          <div class="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-surface-container-lowest p-2 flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
+        <div class="relative flex items-start gap-3 sm:gap-6 md:gap-8" data-animate>
+          <div class="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-surface-container-lowest p-2 flex items-center justify-center shadow-lg shrink-0 ring-4 ring-surface-container-low">
             <img src="logo-bappenas.png" alt="Logo Kementerian PPN/Bappenas" class="w-full h-full object-contain" loading="lazy" decoding="async">
           </div>
-          <div class="w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-5">
+          <div class="w-full bg-surface-container-lowest rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm ring-1 ring-outline-variant/15 card-hover">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 sm:gap-3 mb-4 sm:mb-5">
               <div>
-                <span class="text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Februari 2026 – April 2026</span>
-                <h3 class="font-heading text-headline-sm text-primary mt-1">Data Analyst Intern</h3>
-                <p class="text-title-lg text-secondary font-medium font-heading">Kementerian PPN / Bappenas <span class="font-normal text-on-surface-variant font-body text-body-sm block sm:inline sm:ml-1">(Direktorat Pengembangan Data dan Pemerintah Digital)</span></p>
+                <span class="text-[11px] sm:text-label-sm text-accent-tech-dim uppercase font-semibold font-mono">Februari 2026 – April 2026</span>
+                <h3 class="font-heading text-title-lg sm:text-headline-sm text-primary mt-0.5">Data Analyst Intern</h3>
+                <p class="text-body-md sm:text-title-lg text-secondary font-medium font-heading">Kementerian PPN / Bappenas <span class="font-normal text-on-surface-variant font-body text-body-sm block sm:inline sm:ml-1">(Direktorat Pengembangan Data dan Pemerintah Digital)</span></p>
               </div>
-              <span class="self-start md:self-auto px-3 py-1.5 rounded-xl bg-surface-container text-primary text-label-sm ring-1 ring-outline-variant/15 font-mono shrink-0">Jakarta, Indonesia</span>
+              <span class="self-start md:self-auto px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-surface-container text-primary text-[11px] sm:text-label-sm ring-1 ring-outline-variant/15 font-mono shrink-0">Jakarta, Indonesia</span>
             </div>
-            <ul class="space-y-3.5 text-body-sm sm:text-body-md text-on-surface-variant mb-6">
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">database</span>
+            <ul class="space-y-2.5 sm:space-y-3.5 text-body-xs sm:text-body-md text-on-surface-variant mb-4 sm:mb-6">
+              <li class="flex items-start gap-2.5 sm:gap-3">
+                <span class="material-symbols-outlined text-[18px] sm:text-[20px] text-accent-tech shrink-0 mt-0.5">database</span>
                 <span>Mengelola pemrosesan, pembersihan data (<em>data sanitization</em>), dan validasi dataset sosial-ekonomi skala besar pada portal <strong>DTSEN (Data Tunggal Sosial Ekonomi Nasional)</strong> guna mendukung perumusan kebijakan publik berbasis bukti (<em>evidence-based policy</em>) serta inisiatif digital government.</span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">monitoring</span>
+              <li class="flex items-start gap-2.5 sm:gap-3">
+                <span class="material-symbols-outlined text-[18px] sm:text-[20px] text-accent-tech shrink-0 mt-0.5">monitoring</span>
                 <span>Menerapkan teknik analisis statistika untuk memonitor alur kerja data (<em>data workflows</em>) secara sistematis dan mengidentifikasi serta menuntaskan anomali data demi menjamin presisi metrik pembangunan nasional.</span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-[20px] text-accent-tech shrink-0 mt-0.5">description</span>
+              <li class="flex items-start gap-2.5 sm:gap-3">
+                <span class="material-symbols-outlined text-[18px] sm:text-[20px] text-accent-tech shrink-0 mt-0.5">description</span>
                 <span>Menyusun laporan teknis komprehensif berdasarkan sintesis temuan analitik dan menyelesaikan seluruh target <em>data deliverables</em> tepat waktu guna memperkuat keandalan operasional sistem perencanaan pembangunan nasional.</span>
               </li>
             </ul>
-            <div class="flex flex-wrap items-center gap-2 pt-4 border-t border-outline-variant/15">
-              <span class="text-label-sm font-mono text-secondary mr-1">Skills:</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Analisis Data</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Berpikir Kritis</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Kolaborasi Tim</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Microsoft Excel</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Public Policy</span>
-              <span class="px-3 py-1 rounded-lg bg-surface-container text-primary text-label-sm font-medium">Verifikator Dokumen</span>
+            <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-3 sm:pt-4 border-t border-outline-variant/15">
+              <span class="text-[11px] sm:text-label-sm font-mono text-secondary mr-1">Skills:</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Analisis Data</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Berpikir Kritis</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Kolaborasi Tim</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Microsoft Excel</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Public Policy</span>
+              <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-surface-container text-primary text-[11px] sm:text-label-sm font-medium">Verifikator Dokumen</span>
             </div>
           </div>
         </div>
@@ -677,10 +679,10 @@
 </section>
 
 <!-- PROJECT -->
-<section class="relative w-full py-18 sm:py-22 lg:py-28 bg-surface" id="project">
+<section class="relative w-full py-14 sm:py-20 lg:py-28 bg-surface" id="project">
   <div class="absolute inset-0 tech-grid"></div>
-  <div class="relative w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
-    <div class="mb-10 lg:mb-14" data-animate>
+  <div class="relative w-full px-4 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+    <div class="mb-8 sm:mb-10 lg:mb-14" data-animate>
       <div class="inline-flex items-center gap-2 text-secondary text-label-sm uppercase tracking-widest mb-3">
         <span class="material-symbols-outlined text-[16px]">rocket_launch</span>
         <span>Karya Terpilih</span>
@@ -688,21 +690,21 @@
       <h2 class="font-heading text-headline-lg text-primary">Pengalaman Project</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" data-animate>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5" data-animate>
 
       <!-- Project 1: Sistem Basis Data Perbankan -->
       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ring-1 ring-outline-variant/15 flex flex-col group card-hover">
         <div class="relative h-44 overflow-hidden">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/World_Bank_Group_headquarters.jpg/1280px-World_Bank_Group_headquarters.jpg" alt="World Bank Building" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
-          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-950/60 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm">Database untuk Sains Data</span>
-            <div class="w-7 h-7 rounded-lg bg-slate-950/60 backdrop-blur-md flex items-center justify-center text-white ring-1 ring-white/20 shadow-sm">
+          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10 gap-2">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-950/70 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm max-w-[calc(100%-2.5rem)] truncate">Database untuk Sains Data</span>
+            <div class="w-7 h-7 rounded-lg bg-slate-950/70 backdrop-blur-md flex items-center justify-center text-white ring-1 ring-white/20 shadow-sm shrink-0">
               <span class="material-symbols-outlined text-[16px]">account_balance</span>
             </div>
           </div>
         </div>
-        <div class="p-5 flex-1 flex flex-col justify-between">
+        <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
           <div>
             <h3 class="font-heading text-title-md text-primary mb-1.5 group-hover:text-accent-tech-dim transition-colors line-clamp-1">Sistem Basis Data Perbankan</h3>
             <p class="text-body-xs text-on-surface-variant mb-3 leading-relaxed">Arsitektur basis data relasional perbankan (3NF) terintegrasi Python OOP Repository Pattern dan Web GUI dengan kontrol keamanan akun serta audit trail transaksi real-time.</p>
@@ -728,7 +730,7 @@
             </div>
           </div>
           <div class="pt-3.5 border-t border-outline-variant/15 flex flex-wrap items-center gap-2">
-            <a href="Project/Sistem%20Basis%20Data%20Perbankan-2.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+            <a href="Project/Sistem%20Basis%20Data%20Perbankan-2.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm min-h-[36px]">
               <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">desktop_windows</span>
               <span>Slides</span>
             </a>
@@ -741,14 +743,14 @@
         <div class="relative h-44 overflow-hidden">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Analisis Multivariat MANOVA" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
-          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-950/60 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm">Pengantar Multivariat</span>
-            <div class="w-7 h-7 rounded-lg bg-slate-950/60 backdrop-blur-md flex items-center justify-center text-white ring-1 ring-white/20 shadow-sm">
+          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10 gap-2">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-950/70 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm max-w-[calc(100%-2.5rem)] truncate">Pengantar Multivariat</span>
+            <div class="w-7 h-7 rounded-lg bg-slate-950/70 backdrop-blur-md flex items-center justify-center text-white ring-1 ring-white/20 shadow-sm shrink-0">
               <span class="material-symbols-outlined text-[16px]">query_stats</span>
             </div>
           </div>
         </div>
-        <div class="p-5 flex-1 flex flex-col justify-between">
+        <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
           <div>
             <h3 class="font-heading text-title-md text-primary mb-1.5 group-hover:text-accent-tech-dim transition-colors line-clamp-1">Analisis Multivariat Kasus MANOVA</h3>
             <p class="text-body-xs text-on-surface-variant mb-3 leading-relaxed">Inferensia statistika multivariat metode MANOVA dan ANOVA univariat berbasis R/RStudio untuk evaluasi komparatif vektor mean simultan pada dua studi kasus empiris.</p>
@@ -774,7 +776,7 @@
             </div>
           </div>
           <div class="pt-3.5 border-t border-outline-variant/15 flex flex-wrap items-center gap-2">
-            <a href="Project/Tugas%20Project%20Pengmul%20-%20Riandika%20Rafael%20Jaya%20Pangaribuan%20-%202306242874.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+            <a href="Project/Tugas%20Project%20Pengmul%20-%20Riandika%20Rafael%20Jaya%20Pangaribuan%20-%202306242874.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm min-h-[36px]">
               <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">description</span>
               <span>Laporan</span>
             </a>
@@ -787,14 +789,14 @@
         <div class="relative h-44 overflow-hidden">
           <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Customer Personality Analysis" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
-          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-950/60 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm">Analisis Multivariat</span>
-            <div class="w-7 h-7 rounded-lg bg-slate-950/60 backdrop-blur-md flex items-center justify-center text-white ring-1 ring-white/20 shadow-sm">
+          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10 gap-2">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-950/70 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm max-w-[calc(100%-2.5rem)] truncate">Analisis Multivariat</span>
+            <div class="w-7 h-7 rounded-lg bg-slate-950/70 backdrop-blur-md flex items-center justify-center text-white ring-1 ring-white/20 shadow-sm shrink-0">
               <span class="material-symbols-outlined text-[16px]">hub</span>
             </div>
           </div>
         </div>
-        <div class="p-5 flex-1 flex flex-col justify-between">
+        <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
           <div>
             <h3 class="font-heading text-title-md text-primary mb-1.5 group-hover:text-accent-tech-dim transition-colors line-clamp-1">Customer Personality Analysis</h3>
             <p class="text-body-xs text-on-surface-variant mb-3 leading-relaxed">Studi analitik multivariat 2.240 data pelanggan untuk segmentasi pasar, pemodelan daya beli, serta eksplorasi asosiasi perilaku konsumen via Klastering, Regresi, dan MCA.</p>
@@ -820,7 +822,7 @@
             </div>
           </div>
           <div class="pt-3.5 border-t border-outline-variant/15 flex flex-wrap items-center gap-2">
-            <a href="Project/Laporan%20Projek%20Akhir%20Analisis%20Multivariat%20Kelompok%205%20(1).pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+            <a href="Project/Laporan%20Projek%20Akhir%20Analisis%20Multivariat%20Kelompok%205%20(1).pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm min-h-[36px]">
               <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">description</span>
               <span>Laporan</span>
             </a>
@@ -833,14 +835,14 @@
         <div class="relative h-44 overflow-hidden">
           <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80" alt="Peramalan Saham IBM" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
-          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-950/60 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm">Metode Peramalan</span>
-            <div class="w-7 h-7 rounded-lg bg-slate-950/60 backdrop-blur-md flex items-center justify-center text-white ring-1 ring-white/20 shadow-sm">
+          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10 gap-2">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-950/70 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm max-w-[calc(100%-2.5rem)] truncate">Metode Peramalan</span>
+            <div class="w-7 h-7 rounded-lg bg-slate-950/70 backdrop-blur-md flex items-center justify-center text-white ring-1 ring-white/20 shadow-sm shrink-0">
               <span class="material-symbols-outlined text-[16px]">trending_up</span>
             </div>
           </div>
         </div>
-        <div class="p-5 flex-1 flex flex-col justify-between">
+        <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
           <div>
             <h3 class="font-heading text-title-md text-primary mb-1.5 group-hover:text-accent-tech-dim transition-colors line-clamp-1">Peramalan Saham IBM (ARIMA &amp; GARCH)</h3>
             <p class="text-body-xs text-on-surface-variant mb-3 leading-relaxed">Pemodelan deret waktu 1.089 data harian harga saham IBM (2020–2024) memadukan Box-Jenkins ARIMA untuk estimasi harga dan GARCH untuk estimasi volatilitas risiko pasar.</p>
@@ -866,7 +868,7 @@
             </div>
           </div>
           <div class="pt-3.5 border-t border-outline-variant/15 flex flex-wrap items-center gap-2">
-            <a href="Project/Laporan%20Final%20Project%20Metode%20Peramalan%20-%20Kelompok%208.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+            <a href="Project/Laporan%20Final%20Project%20Metode%20Peramalan%20-%20Kelompok%208.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm min-h-[36px]">
               <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">description</span>
               <span>Laporan</span>
             </a>
@@ -879,14 +881,14 @@
         <div class="relative h-44 overflow-hidden">
           <img src="Project/UAS%20Andat%20TT.png" alt="Playing Cards Detection YOLOv8 Poster" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
-          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-950/60 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm">Analisis Data Tidak Terstruktur</span>
-            <div class="w-7 h-7 rounded-lg bg-slate-950/60 backdrop-blur-md flex items-center justify-center text-white ring-1 ring-white/20 shadow-sm">
+          <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10 gap-2">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-950/70 backdrop-blur-md text-white text-[11px] font-mono font-medium ring-1 ring-white/20 shadow-sm max-w-[calc(100%-2.5rem)] truncate">Analisis Data Tidak Terstruktur</span>
+            <div class="w-7 h-7 rounded-lg bg-slate-950/70 backdrop-blur-md flex items-center justify-center text-white ring-1 ring-white/20 shadow-sm shrink-0">
               <span class="material-symbols-outlined text-[16px]">view_in_ar</span>
             </div>
           </div>
         </div>
-        <div class="p-5 flex-1 flex flex-col justify-between">
+        <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
           <div>
             <h3 class="font-heading text-title-md text-primary mb-1.5 group-hover:text-accent-tech-dim transition-colors line-clamp-1">Playing Cards Detection (YOLOv8)</h3>
             <p class="text-body-xs text-on-surface-variant mb-3 leading-relaxed">Penerapan Computer Vision arsitektur YOLOv8s (Ultralytics) untuk deteksi dan klasifikasi 52 kelas kartu remi secara presisi dengan transfer learning pretrained COCO.</p>
@@ -912,11 +914,11 @@
             </div>
           </div>
           <div class="pt-3.5 border-t border-outline-variant/15 flex flex-wrap items-center gap-2">
-            <a href="Project/UAS%20Andat%20TT.png" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+            <a href="Project/UAS%20Andat%20TT.png" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm min-h-[36px]">
               <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">image</span>
               <span>Poster</span>
             </a>
-            <a href="Project/Andat_TT_UAS.ipynb" download class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm">
+            <a href="Project/Andat_TT_UAS.ipynb" download class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container/60 hover:bg-primary hover:text-on-primary hover:border-primary text-on-surface-variant text-body-xs font-medium transition-all group/btn shadow-sm min-h-[36px]">
               <span class="material-symbols-outlined text-[16px] text-secondary group-hover/btn:text-on-primary transition-colors">code</span>
               <span>Notebook</span>
             </a>
@@ -931,20 +933,20 @@
 
 
 <!-- BACK-TO-TOP -->
-<button aria-label="Kembali ke atas" class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-40 w-12 h-12 rounded-xl bg-primary text-on-primary shadow-xl opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4 hover:scale-110 hover:shadow-2xl flex items-center justify-center ring-1 ring-primary-fixed-dim/30" id="back-to-top">
-  <span class="material-symbols-outlined text-[24px]">keyboard_arrow_up</span>
+<button aria-label="Kembali ke atas" class="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary text-on-primary shadow-xl opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4 hover:scale-110 hover:shadow-2xl flex items-center justify-center ring-1 ring-primary-fixed-dim/30" id="back-to-top">
+  <span class="material-symbols-outlined text-[22px] sm:text-[24px]">keyboard_arrow_up</span>
 </button>
 
 </main>
 
 <!-- FOOTER -->
 <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 py-8 sm:py-10">
-  <div class="w-full px-5 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
+  <div class="w-full px-4 sm:px-8 lg:px-12 xl:px-16 max-w-[90rem] mx-auto">
     <div class="flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
       <!-- Brand + tagline -->
       <div>
-        <span class="font-heading text-headline-sm text-primary block mb-1">Rafael's Portofolio</span>
-        <p class="text-body-sm text-on-surface-variant">Data Analyst &amp; Business Intelligence</p>
+        <span class="font-heading text-title-lg sm:text-headline-sm text-primary block mb-1">Rafael's Portofolio</span>
+        <p class="text-[13px] sm:text-body-sm text-on-surface-variant">Data Analyst &amp; Business Intelligence</p>
       </div>
 
       <!-- Social icons -->
@@ -952,13 +954,13 @@
         <a href="mailto:rafaelpngrbn496@gmail.com" aria-label="Email" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
         </a>
-        <a href="https://wa.me/6287880878450" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
+        <a href="https://wa.me/6287880878450" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.67-1.18.21-.59.21-1.09.15-1.18-.06-.1-.23-.17-.48-.3z"></path></svg>
         </a>
-        <a href="https://www.linkedin.com/in/riandikarafael" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
+        <a href="https://www.linkedin.com/in/riandikarafael" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
         </a>
-        <a href="https://www.instagram.com/rafaelpngrbn_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
+        <a href="https://www.instagram.com/rafaelpngrbn_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
         </a>
       </div>
